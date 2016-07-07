@@ -153,12 +153,14 @@ Sanity-check taking the soap when the soap is in the soap dispenser:
 Instead of squeezing the soap dispenser:
 	if soap is in the dispenser:
 		if the number of sinks in the location is greater than 0:
-			let target be a random sink;
-			if a marked-visible sink contains an open container (called receptor):
-				now target is the receptor;
+			let target be a random sink in the location;
+			follow the remove things from sink rules for target;
+			if a switched on tap (called target tap) is part of the target:
+				silently try switching off target tap;
+				say "First switching off [the target tap], [we][run paragraph on]";
 			otherwise:
-				now target is a random sink in the location;
-			say "[We] give the dispenser a squeeze and it deposits some soap in [the target][if the target is a sink] [--] just viscous enough not to drain away instantly[end if].";
+				say "[We][run paragraph on]";
+			say " give the dispenser a squeeze. It deposits some soap in [the target] [--] just viscous enough not to drain away instantly.";
 			move the soap to the target;
 		otherwise:
 			say "[We] give the dispenser a squeeze and it deposits some soap on the floor, the sink having been removed from the area.";

@@ -2170,7 +2170,7 @@ Persuasion rule for asking the pirate-crew to try doing something:
 	otherwise:
 		say "They mumble defiantly." instead.]
 
-Instead of washing the pirate-crew:
+Sanity-check washing the pirate-crew:
 	say "Heaven knows they need it, but they don't look terribly cooperative."
 
 Instead of showing the spot to the pirate-crew:
@@ -2843,9 +2843,19 @@ Sanity-check burning the sap-liquid:
 
 Instead of squeezing the sap-dispenser:
 	if sap-liquid is in the sap-dispenser:
-		let target be a random sink in the location;
-		say "[We] give the dispenser a squeeze and it deposits some sap in the sink [--] just viscous enough not to drain away instantly.";
-		move the sap-liquid to the target;
+		if the number of sinks in the location is greater than 0:
+			let target be a random sink in the location;
+			follow the remove things from sink rules for the target;
+			if a switched on tap (called target tap) is part of the target:
+				silently try switching off target tap;
+				say "First switching off [the target tap], [we][run paragraph on]";
+			otherwise:
+				say "[We][run paragraph on]";
+			say " give the dispenser a squeeze and it deposits some sap in [the target][if the target is a sink] [--] just viscous enough not to drain away instantly.";
+			move the sap-liquid to the target;
+		otherwise:
+			say "[We] give the dispenser a squeeze and it deposits some sap on the floor, the sink having been removed from the area.";
+			move the sap-liquid to the location;
 	otherwise:
 		say "This time nothing much comes out."
 

@@ -105,6 +105,8 @@ Definition: a thing is single put on only:
 		yes;
 	if it is enclosed by the display case:
 		yes;
+	if it is fluid-filled:
+		yes;
 	if it is not enclosed by the player and the location is privately-controlled:
 		yes.
 
