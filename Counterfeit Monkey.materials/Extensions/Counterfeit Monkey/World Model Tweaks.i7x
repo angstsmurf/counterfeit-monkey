@@ -1122,8 +1122,11 @@ Carry out fueling something with something:
 	record "fueling our car" as achieved;
 	say "I deeply fear automotive maintenance, but I can (just) manage to pour in the fuel... and I think that's done it." instead.
 
-Rule for printing the name of a car while opening or closing a car:
-	say "car door".
+Rule for printing the name of a car while closing a car (called target car):
+	say "[car-truck-shuttle] door".
+
+To say car-truck-shuttle:
+	say "[if item described is alterna-shuttle]shuttle[else if item described is truck]truck[else]car[end if]"
 
 Understand "fix [something]" or "mend [something]" or "tune [something]" or "tune up [something]" or "tune [something] up" or "repair [something]" as tuning. Tuning is an action applying to one thing.
 
@@ -1136,15 +1139,15 @@ Sanity-check tuning something which is not a car:
 
 Check tuning:
 	if the noun is not damaged:
-		say "The car has already been repaired and is now in working order." instead;
+		say "[The noun] has already been repaired and is now in working order." instead;
 	otherwise:
 		say "I'm not good at this sort of thing. I mostly leave repairs to the garage." instead.
 
 Sanity-check inserting oil into a car:
 	say "In my limited interactions with motor vehicles, I've always taken the machine to a garage for any corrective work. This includes topping up the oil." instead.
 
-Report opening a car:
-	say "[one of][We] open the car door: perhaps unsurprisingly, it comes without an effective lock system.[or][We] swing the car door open.[or][We] open the door of the car.[stopping]" instead.
+Report opening a car (called target car):
+	say "[regarding the target car][one of][We] open the [car-truck-shuttle] door: perhaps unsurprisingly, it comes without an effective lock system.[or][We] swing the [car-truck-shuttle] open.[or][We] open the door of the [car-truck-shuttle].[stopping]" instead.
 
 A description-concealing rule:
 	now every thing which encloses the player is not marked for listing.
@@ -1165,14 +1168,14 @@ Check going somewhere by an open car (called target):
 	if the target is open, stop the action.
 
 Rule for describing the interior of a car (called target car):
-	say "[We] [are] jammed into the car with our knees almost at our chin, looking out through the bulbous little [if the player wears the Britishizing goggles]windscreen[otherwise]windshield[end if][if a switched on ignition is part of target car]. The motor is growling like a housecat with pneumonia[end if]."
+	say "[We] [are] jammed into the [car-truck-shuttle] with our knees almost at our chin, looking out through the bulbous little [if the player wears the Britishizing goggles]windscreen[otherwise]windshield[end if][if the ignition is switched on]. The motor is growling like a housecat with pneumonia[end if]."
 
 An ignition is a kind of device. One ignition is part of every car. Understand "motor" as an ignition. Instead of listening to an ignition, try listening to a random car which incorporates the noun.
 
 The gas-gauge is a kind of thing. One gas-gauge is part of every car. The description is "[if the item described is part of a car that is fueled]It points over at the right, which must be Full[otherwise]It points all the way around at the left, or Empty[end if]." The printed name of the gas-gauge is "gas gauge". Understand "gauge" or "gas gauge" as the gas-gauge.
 
-Check switching on an ignition which is part of an unfueled car:
-	say "There's no gas in the car; without fuel, it's not going far." instead.
+Check switching on an ignition which is part of an unfueled car (called target car):
+	say "There's no gas in the [regarding target car][car-truck-shuttle]; without fuel, it's not going far." instead.
 
 Check switching on an ignition which is part of a damaged car:
 	say "Though the engine does briefly turn on, there's clearly something wrong with it, from the unpleasant noises and the flashing lights on the dash. Perhaps it needs oil." instead.
@@ -1192,8 +1195,8 @@ Sanity-check going by unfueled car:
 	assign "Fuel the car" at High Street;
 	say "The extremely primitive dial in front of us is pointing all the way to the left. I think that's its way of saying it's out of fuel. At any rate, the engine won't start." instead.
 
-Sanity-check going by damaged car:
-	say "The car refuses to run properly: evidently you got us a lemon. It's going to take some tuning up before it will go." instead.
+Instead of going by damaged car (called target car):
+	say "[regarding target car]The [car-truck-shuttle] refuses to run properly: evidently you got us a lemon. It's going to take some tuning up before it will go." instead
 
 Sanity-check switching on a car:
 	try switching on a random ignition which is part of the noun instead.
@@ -1207,28 +1210,28 @@ Carry out switching on an ignition:
 Carry out switching off an ignition:
 	now a random car which incorporates the noun is quiet.
 
-Instead of listening to a noisy car:
-	say "The car is making an unpleasant raspy growl."
+Instead of listening to a noisy car (called target car):
+	say "[regarding target car]The [car-truck-shuttle] is making an unpleasant raspy growl."
 
-Instead of going by car (called used car) to somewhere offroad:
+Instead of going by car (called target car) to somewhere offroad:
 	if the player is hurrying:
-		if the used car is noisy:
+		if the target car is noisy:
 			say "[one of][path-walked so far]Then[or][path-walked so far]There[or]Once [we] get to [location][or]At [location][at random] [we] [find a parking spot].[paragraph break]";
 		otherwise:
 			say "[path-walked so far]";
 		clear path-walked for player;
 		increase path description count by 1;
-	otherwise if used car is noisy:
-		say "Since there's no way by road, we'll have to leave [the used car] here. It is a moment's work to find a parking spot. [run paragraph on]";
+	otherwise if target car is noisy:
+		say "Since there's no way by road, we'll have to leave [the target car] here. It is a moment's work to find a parking spot. [run paragraph on]";
 	otherwise:
-		say "That involves some off-road travel. We'll have to leave [the used car] here and walk. [run paragraph on]";
+		say "That involves some off-road travel. We'll have to leave [the target car] here and walk. [run paragraph on]";
 	try exiting;
-	if the player is in a car,
+	if the player is in target car,
 		stop the action;
 	otherwise try going the noun.
 
-Report exiting when the container exited from is a car:
-	say "We climb out of the car." instead.
+Report exiting when the container exited from is a car (called target car):
+	say "[regarding target car]We climb out of the [car-truck-shuttle]." instead.
 
 To say find a parking spot:
 	if the current daytime is:
@@ -1245,8 +1248,8 @@ To say find a parking spot:
 		-- evening:
 			say "park" [shouldn't happen because it shouldn't be evening while we're still in driving mode. But we'll see.]
 
-Instead of going by car when the location is offroad:
-	say "This isn't exactly an area in which driving is encouraged. In fact, I'm not sure [we] can get the car anywhere."
+Instead of going by car (called target car) when the location is offroad:
+	say "This isn't exactly an area in which driving is encouraged. In fact, I'm not sure [we] can get [the target car] anywhere."
 
 
 

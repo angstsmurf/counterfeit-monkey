@@ -687,8 +687,8 @@ Test mech2 with "tutorial off / wave b-remover at garbage / test car-series / wa
 
 Test car-series with "ask mechanic to fix car / show fuel to mechanic / ask mechanic about fuel / show gas to mechanic / ask mechanic about gas / show oil to mechanic / ask mechanic about oil / ask mechanic about car / show car to mechanic / get in car / start car / switch on car / switch on ignition / get out".
 
-Instead of showing an operational car to the mechanic:
-	say "We signify the car by pointing.";
+Instead of showing an operational car (called target car) to the mechanic:
+	say "We signify [the target car] by pointing.";
 	try the mechanic discussing whether car be fixed.
 
 
@@ -708,8 +708,8 @@ whether car be fixed is a questioning quip.
  It is repeatable.
  Every car is mentioned by whether car be fixed.
 
-Instead of showing a damaged car to the mechanic:
-	say "We indicate the car with gestures.";
+Instead of showing a damaged car (called target car) to the mechanic:
+	say "We indicate [the target car] with gestures.";
 	try the mechanic discussing why the car does not run.
 
 Instead of asking the mechanic to try doing something when a car is the noun or a car is the second noun:

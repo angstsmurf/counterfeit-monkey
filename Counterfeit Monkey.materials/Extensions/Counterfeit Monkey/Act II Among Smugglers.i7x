@@ -963,14 +963,14 @@ I give the wheel a yank and run the car up onto the central traffic circle a lit
 		move the player to Traffic Circle;
 		follow the compass-drawing rule instead.
 
-Sanity-check doing something when the location is Traffic Circle and the player is in a car:
+Sanity-check doing something when the location is Traffic Circle and the player is in a car (called target car):
 	if the noun is a thing and the noun is not enclosed by a car and the noun is not a car:
-		say "We don't have a good angle on the action from inside the car." instead;
+		say "We don't have a good angle on the action from inside [the target car]." instead;
 	if the second noun is a thing and the second noun is not enclosed by a car and the second noun is not a car:
-		say "We don't have a good angle on the action from inside the car." instead;
+		say "We don't have a good angle on the action from inside [the target car]." instead;
 
-Sanity-check exiting when the player is in an undisguised car and the location is Traffic Circle:
-	say "I can see an officer making his way between the cars and stopping at the fake ones. Maybe we'd better conceal our car before we leave it [--] we may need to make a quick getaway later." instead.
+Sanity-check exiting when the player is in an undisguised car (called target car) and the location is Traffic Circle:
+	say "I can see an officer making his way between the cars and stopping at the fake ones. Maybe we'd better conceal our [target car] before we leave it [--] we may need to make a quick getaway later." instead.
 
 
 Check waving the letter-remover at the Traffic Circle when the current setting of the letter-remover is "l":
@@ -985,8 +985,8 @@ The no-dropping rule does nothing when the current action is dropping the restor
 [Procedural rule while dropping the restoration-gel rifle when the location is Traffic Circle:
 	ignore the no-dropping rule.]
 
-Rule for describing the interior of a car when the location is Traffic Circle:
-	say "Normally no pedestrian ever comes to this circle of grass and litter: the flow of traffic is too constant and too fast. But the protest has stopped the traffic and I'm determined to do something about the two teenagers I saw just now, so here we are. Though we probably have to get out of the car if we're going to be useful.";
+Rule for describing the interior of a car (called target car) when the location is Traffic Circle:
+	say "Normally no pedestrian ever comes to this circle of grass and litter: the flow of traffic is too constant and too fast. But the protest has stopped the traffic and I'm determined to do something about the two teenagers I saw just now, so here we are. Though we probably have to get out of [the target car] if we're going to be useful.";
 	rule succeeds.
 
 Instead of going to Traffic Circle:
