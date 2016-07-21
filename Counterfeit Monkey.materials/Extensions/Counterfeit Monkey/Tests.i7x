@@ -120,9 +120,9 @@ Test meetA with "test workdais / set platform to synthesize / put counter on pla
 
 Test escape1 with "x stamp / z / shoot atlantida with anagramming gun / shoot rifle with anagramming gun / gel atlantida / gel astrologer / shoot atlantida with rifle / get atlantida / e / n / yes / x jacks / take jacks / wave s-remover at jacks / go to workshop / put atlantida on platform / set platform to homonym / turn on platform ".
 
-Test escape2 with "go to personal apartment / take jack / e / n / d / x boulders / wave q-remover at squid / wave l-remover at bollard / wave d-remover at board / wave b-remover at boar / get oar / enter kayak / drop all but oar / n / n / score / inventory utilitarian / i / get up / open wardrobe / fore / wear sundress / wear trousers / wear turtleneck / fore / open cabinet / x newspaper".
+Test escape2 with "go to personal apartment / take jack / e / open window / n / d / x boulders / wave q-remover at squid / wave l-remover at bollard / wave d-remover at board / wave b-remover at boar / get oar / enter kayak / drop all but oar / n / n / score / inventory utilitarian / i / get up / open wardrobe / fore / wear sundress / wear trousers / wear turtleneck / fore / open cabinet / x newspaper".
 
-Test escape3 with "go to personal apartment / take jack / e / n / wave k-remover at rock / ride roc / n / score / inventory utilitarian / i / get up / open wardrobe / fore / wear sundress / wear trousers / wear turtleneck / fore / open cabinet / x newspaper".
+Test escape3 with "go to personal apartment / take jack / e / open window / n / wave k-remover at rock / ride roc / n / score / inventory utilitarian / i / get up / open wardrobe / fore / wear sundress / wear trousers / wear turtleneck / fore / open cabinet / x newspaper".
 
 Test revival with "put gel on rock / go to galley / put gel on me".
 

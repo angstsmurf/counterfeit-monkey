@@ -534,6 +534,7 @@ turn on platform
 go to personal apartment
 take jack
 e
+open window
 n
 wave k-remover at rock
 ride roc
@@ -1078,6 +1079,7 @@ turn on platform
 go to personal apartment
 take jack
 e
+open window
 n
 d
 x boulders
@@ -1546,6 +1548,7 @@ turn on platform
 go to personal apartment
 take jack
 e
+open window
 n
 d
 x boulders

@@ -747,8 +747,8 @@ Check attacking the tall window with something:
 Instead of climbing the tall window:
 	try entering the tall window.
 
-Instead of going through the closed tall window:
-	say "The window is shut: you'd break the glass."
+Sanity-check going through the closed tall window:
+	say "The window is shut: you'd break the glass." instead.
 
 
 Official Grounds is a region. The Antechamber, Rotunda, Tools Exhibit, All-Purpose Office, Bureau Hallway, Bureau Basement South, Bureau Basement Middle, Bureau Basement Secret Section, Wonderland, and Sensitive Equipment Testing Room, Equipment Archive, Cold Storage,  Display Reloading Room, Workshop, Generator Room, Surveillance Room, and Oracle Project are in the Official Grounds.
