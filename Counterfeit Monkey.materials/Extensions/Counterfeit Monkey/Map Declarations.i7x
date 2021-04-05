@@ -24,73 +24,73 @@ Consequently, each place where the player's @ can appear gets its own copy of th
 These are the definitions of images associated with room maps. They have to go after the rooms themselves are defined, and it was easier keeping them all in one place than scattering the declarations through the rest of code, so this section could be commented out for testing.]
 
 [Figure of Background is the file "map-background.png".]
-Figure of Back-Alley is the file "map-back-alley.png" ("A city map.").
-Figure of Sigil-St is the file "map-sigil-street.png" ("A city map.").
-Figure of Amp-Bend is the file "map-ampersand-bend.png" ("A city map.").
-Figure of Abandoned-Park is the file "map-abandoned-park.png" ("A city map.").
-Figure of Antechamber is the file "map-antechamber.png" ("A city map.").
-Figure of Apartment is the file "map-apartment.png" ("A city map.").
-Figure of Aquarium is the file "map-aquarium.png" ("A city map.").
-Figure of Arbot is the file "map-arbot.png" ("A city map.").
-Figure of Babel is the file "map-babel.png" ("A city map.").
-Figure of Beach is the file "map-beach.png" ("A city map.").
-Figure of Browns is the file "map-browns.png" ("A city map.").
-Figure of Bus-station is the file "map-bus-station.png" ("A city map.").
-Figure of Church-garden is the file "map-church-garden.png" ("A city map.").
-Figure of Cinema is the file "map-cinema.png" ("A city map.").
-Figure of Counterfeit-monkey is the file "map-counterfeit-monkey.png" ("A city map.").
-Figure of Cove is the file "map-cove.png" ("A city map.").
-Figure of Customs House is the file "map-customs-house.png" ("A city map.").
-Figure of Crawlspace is the file "map-crawlspace.png" ("A city map.").
-Figure of Tin Hut is the file "map-tin-hut.png" ("A city map.").
-Figure of Crumbling Wall is the file "map-crumbling-wall.png" ("A city map.").
-Figure of Deep Street is the file "map-deep-street.png" ("A city map.").
-Figure of Docks is the file "map-docks.png" ("A city map.").
-Figure of Drinks Club is the file "map-drinks-club.png" ("A city map.").
-Figure of Fair is the file "map-fair.png" ("A city map.").
-Figure of Fish Market is the file "map-fish-market.png" ("A city map.").
-Figure of Fleur is the file "map-fleur.png" ("A city map.").
-Figure of Game Zone is the file "map-game-zone.png" ("A city map.").
-Figure of Gift Shop is the file "map-giftshop.png" ("A city map.").
-Figure of Grad Room is the file "map-gradroom.png" ("A city map.").
-Figure of Heritage Corner is the file "map-heritage.png" ("A city map.").
-Figure of Hesychius is the file "map-hesychius-street.png" ("A city map.").
-Figure of High Street is the file "map-high-street.png" ("A city map.").
-Figure of Hostel is the file "map-hostel.png" ("A city map.").
-Figure of Inside Bureau is the file "map-inside-bureau.png" ("A city map.").
-Figure of Long North is the file "map-long-north.png" ("A city map.").
-Figure of Long South is the file "map-long-south.png" ("A city map.").
-Figure of Monumental Staircase is the file "map-monumental-staircase.png" ("A city map.").
-Figure of New Church is the file "map-new-church.png" ("A city map.").
-Figure of OCW is the file "map-old-city-walls.png" ("A city map.").
-Figure of Open Sea is the file "map-open-sea.png" ("A city map.").
-Figure of Outdoor-cafe is the file "map-outdoor-cafe.png" ("A city map.").
-Figure of Outside-church is the file "map-outside-church.png" ("A city map.").
-Figure of Oval is the file "map-oval.png" ("A city map.").
-Figure of Palm Square is the file "map-palm-square.png" ("A city map.").
-Figure of Park Center is the file "map-park-center.png" ("A city map.").
-Figure of Patriotic Chard Garden is the file "map-patriotic-chard.png" ("A city map.").
-Figure of Precarious Perch is the file "map-precarious.png" ("A city map.").
-Figure of Public Convenience is the file "map-public-convenience.png" ("A city map.").
-Figure of Reclamation is the file "map-reclamation.png" ("A city map.").
-Figure of Roget Close is the file "map-roget-close.png" ("A city map.").
-Figure of Rotunda is the file "map-rotunda.png" ("A city map.").
-Figure of Roundabout is the file "map-roundabout.png" ("A city map.").
-Figure of Roundabout-2 is the file "map-roundabout-2.png" ("A city map.").
-Figure of Roundabout-3 is the file "map-roundabout-3.png" ("A city map.").
-Figure of Roundabout-4 is the file "map-roundabout-4.png" ("A city map.").
-Figure of Screening Room is the file "map-screening-room.png" ("A city map.").
-Figure of SJ-Basement is the file "map-sj-basement.png" ("A city map.").
-Figure of SJ-Department is the file "map-sj-department.png" ("A city map.").
-Figure of SJ-Lecture is the file "map-sj-lecture.png" ("A city map.").
-Figure of SJ-Seminar is the file "map-sj-seminar-room.png" ("A city map.").
-Figure of SJ-Hall is the file "map-sjhall.png" ("A city map.").
-Figure of Tall Street is the file "map-tall-street.png" ("A city map.").
-Figure of Tools Exhibit is the file "map-tools-exhibit.png" ("A city map.").
-Figure of Traffic Circle is the file "map-traffic-circle.png" ("A city map.").
-Figure of Turret is the file "map-turret.png" ("A city map.").
-Figure of Webster Court is the file "map-webster-court.png" ("A city map.").
-Figure of Winding Path is the file "map-winding-path.png" ("A city map.").
+Figure of Back-Alley is the file "map-back-alley.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Back Alley near the southwest corner of the map.").
+Figure of Sigil-St is the file "map-sigil-street.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Sigil Street near the southwest corner of the map.").
+Figure of Amp-Bend is the file "map-ampersand-bend.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Ampersand Bend near the southwest corner of the map.").
+Figure of Abandoned-Park is the file "map-abandoned-park.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Abandoned Park in the eastern part of the map.").
+Figure of Antechamber is the file "map-antechamber.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Antechamber in the Bureau of Orthography toward the east of the map.").
+Figure of Apartment is the file "map-apartment.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Apartment toward the south of the map.").
+Figure of Aquarium is the file "map-aquarium.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Aquarium Bookstore to the northeast of the map.").
+Figure of Arbot is the file "map-arbot.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Arbot's Books & Antiques south of the center of the map.").
+Figure of Babel is the file "map-babel.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Babel Café by the south edge of the map.").
+Figure of Beach is the file "map-beach.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Beach in the northwest corner of the map.").
+Figure of Browns is the file "map-browns.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Brown's Office inside the University at the south edge of the map.").
+Figure of Bus-station is the file "map-bus-station.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign by the Bus Station at the east edge of the map.").
+Figure of Church-garden is the file "map-church-garden.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign in the Church Garden at the west edge of the map.").
+Figure of Cinema is the file "map-cinema.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cinema toward the west of the map.").
+Figure of Counterfeit-monkey is the file "map-counterfeit-monkey.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Counterfeit Monkey bar at the north of the map.").
+Figure of Cove is the file "map-cove.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Customs House is the file "map-customs-house.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Crawlspace is the file "map-crawlspace.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Tin Hut is the file "map-tin-hut.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Crumbling Wall is the file "map-crumbling-wall.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Deep Street is the file "map-deep-street.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Docks is the file "map-docks.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Drinks Club is the file "map-drinks-club.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Fair is the file "map-fair.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Fair in the park in the west part of the map.").
+Figure of Fish Market is the file "map-fish-market.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Fish Market in the north part of the map.").
+Figure of Fleur is the file "map-fleur.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Fleur d'Or Drinks Club south of center of the map.").
+Figure of Game Zone is the file "map-game-zone.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Church Gift Shop inside the church at the west edge of the map.").
+Figure of Gift Shop is the file "map-giftshop.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the southwest corner of the park in the west part of the map.").
+Figure of Grad Room is the file "map-gradroom.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Heritage Corner is the file "map-heritage.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Heritage Corner in the west part of the map.").
+Figure of Hesychius is the file "map-hesychius-street.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Hesychius Street in the northwest part of the map.").
+Figure of High Street is the file "map-high-street.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Hostel is the file "map-hostel.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Hostel west of center of the map.").
+Figure of Inside Bureau is the file "map-inside-bureau.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign Inside the Bureau of Orthography in the east part of the map.").
+Figure of Long North is the file "map-long-north.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Long Street North near the center of the map.").
+Figure of Long South is the file "map-long-south.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Long Street South at the south part of the map.").
+Figure of Monumental Staircase is the file "map-monumental-staircase.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of New Church is the file "map-new-church.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of OCW is the file "map-old-city-walls.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Open Sea is the file "map-open-sea.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Outdoor-cafe is the file "map-outdoor-cafe.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Outdoor Café at the northeast of the map.").
+Figure of Outside-church is the file "map-outside-church.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Oval is the file "map-oval.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Palm Square is the file "map-palm-square.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Park Center is the file "map-park-center.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Patriotic Chard Garden is the file "map-patriotic-chard.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Precarious Perch is the file "map-precarious.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Public Convenience is the file "map-public-convenience.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Reclamation is the file "map-reclamation.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Roget Close is the file "map-roget-close.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Rotunda is the file "map-rotunda.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Rotunda at the northeast of the map.").
+Figure of Roundabout is the file "map-roundabout.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Roundabout in the center of the map.").
+Figure of Roundabout-2 is the file "map-roundabout-2.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Roundabout in the center of the map.").
+Figure of Roundabout-3 is the file "map-roundabout-3.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Roundabout in the center of the map.").
+Figure of Roundabout-4 is the file "map-roundabout-4.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Roundabout in the center of the map.").
+Figure of Screening Room is the file "map-screening-room.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign in the Screening Room of the Cinema in the western part of the map.").
+Figure of SJ-Basement is the file "map-sj-basement.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of SJ-Department is the file "map-sj-department.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of SJ-Lecture is the file "map-sj-lecture.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of SJ-Seminar is the file "map-sj-seminar-room.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of SJ-Hall is the file "map-sjhall.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Tall Street is the file "map-tall-street.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Tall Street in the eastern part of the map.").
+Figure of Tools Exhibit is the file "map-tools-exhibit.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Tools Exhibit in the Bureau of Orthography in the east part of the map.").
+Figure of Traffic Circle is the file "map-traffic-circle.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Turret is the file "map-turret.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Cove at the northeast of the map.").
+Figure of Webster Court is the file "map-webster-court.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at Webster Court in the northwest part of the map.").
+Figure of Winding Path is the file "map-winding-path.png" ("A city map made out of letters in different typefaces. The player location is marked with an At sign at the Winding Path towards the Beach at the northwest edge of the map.").
 
 A room has a figure-name called the local map.
 
@@ -209,7 +209,7 @@ The design aims for the Bureau-internal maps are:
 
 Chapter 3 - Aboard the Yacht
 
-[The yacht plans are different in almost every respect from the maps elsewhere. They use images exclusively rather than words, replace the player's @ sign with a yellow you-are-here star, and portray close-up details (such as beds and even toilets) that wouldn't even be hinted at in the main game area.
+[The yacht plans are different in almost every respect from the maps elsewhere. They use images exclusively rather than words, replace the player's At sign sign with a yellow you-are-here star, and portray close-up details (such as beds and even toilets) that wouldn't even be hinted at in the main game area.
 
 The design aims for the yacht plans are:
 
