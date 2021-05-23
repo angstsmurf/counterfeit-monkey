@@ -12,10 +12,11 @@ The new mark every thing as unmentioned when play begins rule is listed instead 
 
 The mark every thing as unmentioned when play begins rule is not listed in any rulebook.
 
-Before reading a command (this is the new mark everything unmentioned rule):
-	rapidly set all things not mentioned.
+[Before reading a command (this is the new mark everything unmentioned rule):
+	rapidly set all things not mentioned.]
 
-The new mark everything unmentioned rule is listed instead of the mark everything unmentioned rule in the before reading a command rules.
+[The new mark everything unmentioned rule is listed instead of the mark everything unmentioned rule in the before reading a command rules.]
+The mark everything unmentioned rule is not listed in the before reading a command rules.
 
 
 A description-priority rule (this is the new marking rule):
@@ -83,7 +84,12 @@ The new standard surroundings rule is listed instead of the standard surrounding
 
 [ And these from the Standard Rules ]
 
-The declare everything initially unmentioned rule is not listed in any rulebook.
+This is the optimized declare everything initially unmentioned rule:
+  rapidly set all things not mentioned;
+
+The declare everything initially unmentioned rule is not listed in the startup rulebook.
+
+The optimized declare everything initially unmentioned rule is listed instead of the declare everything initially unmentioned rule in the turn sequence rulebook.
 
 The new declare everything unmentioned rule is listed instead of the declare everything unmentioned rule in the carry out looking rules.
 
