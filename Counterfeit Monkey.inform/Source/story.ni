@@ -70,6 +70,9 @@ Chapter 3 - Undo Handling
 Ultra Undo is an extension kindly written by Dannii Willis to use external file recording to ensure that UNDO remains available.]
 
 Include version 1/160501 of Ultra Undo by Dannii Willis.
+Include Standard Rules Dead Code Removal by Nathanael Nerode.
+[Include Gender Options by Nathanael Nerode.]
+[Include Gender Speedup by Nathanael Nerode.]
 
 The release number is 10.
 
@@ -77,8 +80,9 @@ Use scoring.
 Use static object grouping.
 [Use no deprecated features.]
 
+Use OMIT_UNUSED_ROUTINES of 1.
+
 Include Scope Caching by Mike Ciul.
-Include Large Game Speedup by Andrew Plotkin.
 Include Subcommands by Daniel Stelzer.
 
 [ Startup precomputation ]
@@ -93,6 +97,12 @@ The initial conversation rule is listed after the check for echo suppression sup
 
 [Last after starting the virtual machine rule (this is the apologise for a slow start rule):
 	say "Counterfeit Monkey is starting. This may take a short moment.";]
+
+Include Large Game Speedup by Nathanael Nerode.
+
+Section - Disable LGS Unmentioning (in place of Section - Replacing the Unmentioning Rules in Large Game Speedup by Nathanael Nerode)
+
+dummy_variable_for_disabled_lgs_section is a truth state that varies. [necessary because Inform 7 crashes on empty sections; minimum space overhead]
 
 Volume 2 - Source files inclusion
 
