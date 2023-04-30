@@ -128,7 +128,7 @@ Understand "flush [toilet]" or "use [toilet]" as flushing.
 Flushing is an action applying to one thing.
 
 Check an actor flushing a toilet (this is the block flushing toilets rule):
-	if the actor is marked-visible:
+	if the actor is visible:
 		say "[The noun] [flush] dramatically." (A) instead;
 	stop the action.
 
@@ -189,15 +189,15 @@ Setting action variables for pouring a switched on tap into something (this is t
 	now the noun is the flowing water.
 
 Setting action variables for switching on when the noun is a fluid container and the liquid of the noun is water (this is the divert TURN OFF WATER rule):
-	if some switched off taps (called target taps) are marked-visible:
+	if some switched off taps (called target taps) are visible:
 		now the noun is the target taps;
-	otherwise if some taps (called target taps) are marked-visible:
+	otherwise if some taps (called target taps) are visible:
 		now the noun is the target taps.
  
 Setting action variables for switching off when the noun is a fluid container and the liquid of the noun is water (this is the divert TURN ON WATER rule):
-	if the some switched on taps (called target taps) are marked-visible:
+	if the some switched on taps (called target taps) are visible:
 		now the noun is the target taps;
-	otherwise if some taps (called target taps) are marked-visible:
+	otherwise if some taps (called target taps) are visible:
 		now the noun is the target taps.
 
 Rule for clarifying the parser's choice of a fluid container while switching off (this is the avoid awkward fluid switchoffs rule):
@@ -226,7 +226,7 @@ Instead of an actor pouring a fluid container into something which incorporates 
 	now the fluid content of the noun is 0.0 fl oz;
 	if the player is the actor:
 		say "[We] [dump] out [the noun] into [the second noun].";
-	otherwise if the actor is marked-visible:
+	otherwise if the actor is visible:
 		say "[The actor] [dump] out [the noun] into [the second noun]."
 		
 Part 4 - Descriptive Features (for use with Tailored Room Description by Emily Short)

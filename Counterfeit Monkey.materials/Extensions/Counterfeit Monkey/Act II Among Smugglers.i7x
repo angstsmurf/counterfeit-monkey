@@ -78,7 +78,7 @@ Rule for writing a topic sentence about a car (called target car) when the locat
 		say "Our pathetic little [target car] is parked right outside [the aquarium-exterior]. "
 
 Instead of searching aquarium-exterior:
-	if the aquarium-closed-sign is marked-visible:
+	if the aquarium-closed-sign is visible:
 		say "Now that the shade is down, it's impossible to see inside.";
 	otherwise:
 		say "The interior of the shop is so much dimmer than the outside that it's hard to get a good look inside, but from the occasional signs of movement, I think Slango's friend Lena is in there."

@@ -79,7 +79,6 @@ Use scoring.
 Use static object grouping.
 [Use no deprecated features.]
 
-Include Scope Caching by Mike Ciul.
 Include Large Game Speedup by Andrew Plotkin.
 Include Subcommands by Daniel Stelzer.
 

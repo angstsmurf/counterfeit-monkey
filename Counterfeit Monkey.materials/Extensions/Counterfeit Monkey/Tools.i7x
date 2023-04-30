@@ -101,7 +101,7 @@ To say a-an (item - letter-remover device):
 
 The vowel-starting list is a list of texts that vary. The vowel-starting list is { "a", "e", "f", "h", "i", "l", "m", "n", "o", "r", "s", "x" }.
 
-A small knob is part of the letter-remover device. Understand "dial" as the small knob when the lock is marked invisible. The description is "It is very delicately made and stamped with letters around the circumference. The currently up-facing letter is [the current setting of the letter-remover device]."
+A small knob is part of the letter-remover device. Understand "dial" as the small knob when the lock is not visible. The description is "It is very delicately made and stamped with letters around the circumference. The currently up-facing letter is [the current setting of the letter-remover device]."
 
 After printing the name of the small knob:
 	say " on your [letter-remover]".
@@ -415,8 +415,6 @@ Carry out waving the letter-remover device at something:
 		now the generated object is essential; ]
 	[so that 'take it' or whatever will work, after we've made something: ]
 	set pronouns from the generated object;
-	now the generated object is marked-visible;
-	now the second noun is marked invisible;
 	record "using the letter-remover" as achieved;
 	let current be the current setting of the letter-remover;
 	remove current from the list of remaining letters, if present.
@@ -479,8 +477,6 @@ To homonym-paddle (N - a thing):
 		set pronouns from X;
 		now X does not proffer X;
 		now N proffers X;
-		now X is marked-visible;
-		now N is marked invisible;
 		say "[one of]The bartender fishes around in the toolkit for [a N] and sets it on the bar with a flourish. [The patron] is watching this transaction in an interested way.
 
 'This is good,' says the bartender, winking at us both (all?). 'You'll like this.' She raises the homonym paddle unnecessarily high in the air and smashes it down hard on [the N].
@@ -603,8 +599,6 @@ Carry out teeing something:
 			now derivate of the secret-plans is goal-object;
 	now every thing which proffers the noun proffers the goal-object;
 	move the goal-object to the holder of the noun;
-	now goal-object is marked-visible;
-	now the noun is marked invisible;
 	record "using the T-inserter" as achieved;
 	move the noun to the repository.
 
@@ -688,7 +682,7 @@ The screwdriver unlocks the plexiglas case.
 Some screws are a thing. The screws are plural-named. The description of the screws is "Heavy-duty flathead screws, each about an inch long[if the screws are part of the plexiglas case and the plexiglas case is lockable]. They aren't sealed over, so it would be possible to unscrew them, given a screwdriver[end if]."
 
 Instead of taking or turning or taking off the screws when the screws are part of the plexiglas case:
-	if the screwdriver is marked-visible:
+	if the screwdriver is visible:
 		if the player is not carrying the screwdriver:
 			try taking the screwdriver;
 		if the player is not carrying the screwdriver:
@@ -799,9 +793,9 @@ Does the player mean switching on the reclamation computer:
 Understand "synthesize" as synth-activating. Synth-activating is an action applying to nothing.
 
 Carry out synth-activating:
-	if synthesizer is marked-visible:
+	if synthesizer is visible:
 		try switching on the synthesizer instead;
-	if programmable dais is marked-visible:
+	if programmable dais is visible:
 		if the switch-setting of the massive switch is swap homonym:
 			try turning the massive switch;
 		try switching on the programmable dais instead;
@@ -878,9 +872,6 @@ To synthesize contents of (source - a thing):
 		if the chosen article is not examined:
 			try examining the chosen article;
 		set pronouns from the chosen article;
-		now the chosen article is marked-visible;
-		now X is marked invisible;
-		now Y is marked invisible;
 		abide by the dangerous construction rules for the chosen article;
 	otherwise:
 		say "[The source] whirs for a moment, then dies down again.";
@@ -1009,8 +1000,6 @@ This is the spinner-turning rule:
 		record "using the spinner" as achieved;
 		abide by the dangerous construction rules for the chosen article;
 		set pronouns from the chosen article;
-		now the chosen article is marked-visible;
-		now X is marked invisible;
 		if the chosen article is a person and the chosen article is on the spinner:
 			say "[The chosen article] [get] down from the sculpture. ";
 			move the chosen article to location;
@@ -1260,7 +1249,7 @@ Sanity-check putting the origin paste on the tub:
 
 Instead of putting the paste on something:
 	record "using the Origin Paste" as achieved;
-	say "[We] [if a person who is not the player is marked-visible]surreptitiously [end if]smear some of [the paste] onto [the second noun]. Nothing obvious happens, of course, but that is the whole point.";
+	say "[We] [if a person who is not the player is visible]surreptitiously [end if]smear some of [the paste] onto [the second noun]. Nothing obvious happens, of course, but that is the whole point.";
 	now the second noun is disguised.
 
 Instead of smelling a disguised thing:
@@ -1325,12 +1314,12 @@ Understand "use [something gel-related] on/with [something]" as putting it on.
 Understand "gel [something]" as gelling. Gelling is an action applying to one thing.
 
 Carry out gelling something:
-	if the tube is marked-visible:
+	if the tube is visible:
 		if the noun is the tube:
 			try putting the tube on tube instead;
 		otherwise:
 			say "[one of]Unfortunately, there's hardly any gel remaining in the tube.[or]There isn't enough gel remaining in the little tube for use.[at random]" instead;
-	if the tub is marked-visible:
+	if the tub is visible:
 		try putting the restoration gel on the noun instead;
 	otherwise:
 		say "[one of][We] can't gel [the noun] without any gel[or][We] have no gel to gel [the noun] with[cycling]."
@@ -1338,7 +1327,7 @@ Carry out gelling something:
 Understand "paste [something]" or "origin paste [something]" as pasting. Pasting is an action applying to one thing.
 
 Carry out pasting something:
-	if the origin paste is marked-visible:
+	if the origin paste is visible:
 		try putting the origin paste on the noun instead;
 	otherwise:
 		say "[one of][We] can't paste [the noun] without any paste[or][We] have no paste to paste [the noun] with[cycling]."
@@ -1588,10 +1577,8 @@ To gel-convert (item - an object):
 			if source is not in repository:
 				say "[line break][bracket]gel-convert: BUG! [The source] is not in the repository. It will be moved from [the holder of the source] to [the destination].[close bracket][line break]";
 			now the source is in the destination;
-			now the source is marked-visible;
 			if source is stuck:
 				now source is part of the destination;
-		now the item is marked invisible;
 		[play the sound of gel splort;]
 		let description needed be false;
 		if exactly one thing (called the parent) proffers the item:
@@ -1691,14 +1678,14 @@ Does the player mean doing something with the restoration-gel rifle:
 	it is unlikely.
 
 Sanity-check shooting the restoration gel with:
-	if the restoration-gel rifle is marked-visible and the player's command does not include "gel/at with/gel":
+	if the restoration-gel rifle is visible and the player's command does not include "gel/at with/gel":
 		if the player's command includes "shoot/fire gel" or the player's command includes "shoot/fire restoration gel":
 			replace the matched text with "shoot rifle";
 			now the reborn command is the substituted form of "[player's command]";
 			now sp reparse flag is true instead;
 
 Sanity-check shooting the tube with:
-	if the restoration-gel rifle is marked-visible and the player's command does not include "gel/at with/gel":
+	if the restoration-gel rifle is visible and the player's command does not include "gel/at with/gel":
 		if the player's command includes "shoot/fire gel" or the player's command includes "shoot/fire restoration gel":
 			replace the matched text with "shoot rifle";
 			now the reborn command is the substituted form of "[player's command]";
@@ -1857,8 +1844,6 @@ Carry out shooting something with the anagramming gun:
 			now derivate of the secret-plans is the detritus;
 	[ if something (called source) which proffers the detritus encloses an essential thing:
 		now the detritus is essential; ]
-	now the detritus is marked-visible;
-	now the noun is marked invisible;
 	record "using the anagramming gun" as achieved;
 
 Report shooting something with the anagramming gun when the detritus is unseen:
@@ -2034,7 +2019,7 @@ Originally there was no gameplay value to the punch, but later when the generato
 The description of the umlaut punch is "A very heavy, solid object manufactured in Stuttgart. A wire basket holds the item to be punched; two sharp metal tines descend into the basket at the moment of use." Understand "wire basket" or "basket" or "sharp" or "metal" or "tines" as the umlaut punch. The heft of the umlaut punch is 3. The umlaut punch is a container.
 
 
-Understand "punch [something]" as umlaut-punching when the umlaut punch is marked-visible.
+Understand "punch [something]" as umlaut-punching when the umlaut punch is visible.
 
 umlaut-punching is an action applying to one thing.
 
@@ -2087,7 +2072,6 @@ Report inserting something into the umlaut punch:
 	if the power chord is not seen and the power cord is not seen:
 		move the power chord to the location;
 		say "[line break]When they are gone, [a power chord] remains in the air.";
-		now the power chord is marked-visible;
 	stop the action.
 
 To comment on band quality of (item - the honey pastry triangle):
@@ -2251,8 +2235,6 @@ Instead of switching on the big lever:
 					abide by the dangerous destruction rules for the target;
 					move the result to the programmable dais;
 					move the target to the repository;
-					now the result is marked-visible;
-					now the target is marked invisible;
 					if the result is the passage-place:
 						say "[The programmable dais] glows deep red, then deeper. There's a roar like a stadium being demolished, and a passage opens, descending into the dais itself." instead;
 					otherwise:
@@ -2408,8 +2390,6 @@ After inserting something into the cryptolock:
 		otherwise:
 			say "There is a churning noise from within [the cryptolock], and a moment later [we] see inside [a list of things *in the cryptolock]. [run paragraph on]";
 		let paragraph break needed be true;
-		now the chosen article is marked-visible;
-		now the noun is marked invisible;
 		if the chosen article is not examined:
 			try examining the chosen article;
 			now paragraph break needed is false;

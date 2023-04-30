@@ -33,7 +33,7 @@ A description-concealing rule when the temporary barrier is marked for listing:
 	if the location is the Fair and the temporary barrier is open, now the temporary barrier is not marked for listing.
 
 Sanity-check unlocking the temporary barrier with something:
-	if the code is marked-visible:
+	if the code is visible:
 		try setting the code-lock to "code" instead;
 	say "[The temporary barrier] is locked. [We][']d need to set the code-lock to the right number." instead.
 
@@ -46,12 +46,12 @@ Sanity-check unlocking keylessly the temporary barrier:
 		say "[The temporary barrier] is locked. [We][']d need to set the code-lock to the right number." instead.
 
 Sanity-check locking the temporary barrier with something:
-	if the code is marked-visible:
+	if the code is visible:
 		try setting the code-lock to "333" instead;
 	say "[We][']d need to set [the code-lock] to some random number." instead.
 
 Sanity-check locking keylessly the temporary barrier:
-	if the code is marked-visible:
+	if the code is visible:
 		try setting the code-lock to "333" instead;
 	say "[We][']d need to set [the code-lock] to some random number." instead.
 
@@ -71,7 +71,7 @@ Sanity-check unlocking the code-lock with something:
 Sanity-check opening the code-lock:
 	try setting the code-lock to "code" instead.
 
-A code-lock is part of temporary barrier. Understand "code lock" or "lock" as the code-lock. Understand "code" as the code-lock when the code is marked invisible. The description is "The kind of lock that can be set to a three-digit code, assuming one knows what the code is."
+A code-lock is part of temporary barrier. Understand "code lock" or "lock" as the code-lock. Understand "code" as the code-lock when the code is not visible. The description is "The kind of lock that can be set to a three-digit code, assuming one knows what the code is."
 
 Before typing the topic understood on the code-lock:
 	try setting the code-lock to the topic understood instead.
@@ -87,7 +87,7 @@ Understand "use code" as code-entering. Understand "enter code" as code-entering
 Code-entering is an action applying to nothing.
 
 Check code-entering:
-	unless the code-lock is marked-visible:
+	unless the code-lock is visible:
 		say "There's nothing here on which to enter a code." instead.
 
 Carry out code-entering:
@@ -115,7 +115,7 @@ Instead of setting the code-lock to "305":
 Understand "the right number/code" or "the number/code" or "number/code" or "right number/code" as "[code]".
 
 Instead of setting the code-lock to "[code]":
-	if the code is marked invisible:
+	if the code is not visible:
 		say "If only the code were written down somewhere nearby.";
 	otherwise:
 		try setting the code-lock to "305".
@@ -548,7 +548,7 @@ An instructional rule (this is the teach more compass directions rule):
 	let way be nothing;
 	if an unvisited room (called goal) is adjacent:
 		let way be the true-best route to the goal;
-	otherwise if there is a marked-visible open door (called portal):
+	otherwise if there is a visible open door (called portal):
 		let far side be the other side of the portal;
 		let way be the true-best route to the far side;
 	otherwise:
@@ -724,7 +724,7 @@ An instructional rule (this is the new teach compass directions rule):
 	let way be nothing;
 	if a room (called goal) is adjacent:
 		let way be the true-best route to the goal;
-	otherwise if an open door (called portal) is marked-visible:
+	otherwise if an open door (called portal) is visible:
 		let far side be the other side of the portal;
 		let way be the true-best route to the far side;
 	otherwise:
@@ -1651,7 +1651,7 @@ She then tears out of the room, leaving it unattended. Unfortunately, places lik
 	if the attendant is the current interlocutor:
 		reset the interlocutor.
 
-The attendant wears a nose-ring and a blouse. The description of the blouse is "White cotton with little ribbons on it. I hate that kind of frilly nonsense." The description of the nose-ring is "It's silver and reasonably discreet." Understand "nose" or "nose ring" as the nose-ring. Understand "ring" as the nose-ring when the ring is marked invisible.
+The attendant wears a nose-ring and a blouse. The description of the blouse is "White cotton with little ribbons on it. I hate that kind of frilly nonsense." The description of the nose-ring is "It's silver and reasonably discreet." Understand "nose" or "nose ring" as the nose-ring. Understand "ring" as the nose-ring when the ring is not visible.
 
 The Dormitory Room is above the Hostel. It is indoors. Understand "dorm" as the Dormitory Room. The description is "Painted off-white, with [hard wood floors] under many layers of protective gloss coating: there are no surfaces in this room that would take a stain. Four [random dorm bed]s are lined up against the wall."
 
@@ -1761,10 +1761,10 @@ Report frowning when chiding-attendant ended in results and the time since chidi
 
 'Oh, whatever,' says the girl. 'She deserves it.'" instead.
 
-Instead of waving the letter-remover at the locker when the backpacking girl is marked-visible:
+Instead of waving the letter-remover at the locker when the backpacking girl is visible:
 	try taking the locker.
 
-Instead of waving the letter-remover at the lock when the backpacking girl is marked-visible:
+Instead of waving the letter-remover at the lock when the backpacking girl is visible:
 	try taking the lock.
 
 Sanity-check showing the locker to the backpacking girl:
@@ -1774,7 +1774,7 @@ Sanity-check showing the lock to the backpacking girl:
 	carry out the refusing comment by activity with the backpacking girl instead.
 
 An accessibility rule when the touch-goal is the lock or the touch-goal is the locker:
-	if the backpacking girl is marked invisible:
+	if the backpacking girl is not visible:
 		make no decision;
 	otherwise:
 		say "[The backpacking girl] is watching our every move with unconcealed curiosity, which makes me a little hesitant to do anything with the locker[one of][or]. Maybe if we freaked her out somehow she would go away[or]. I think our best bet is to show her something that really weirds her out[stopping]." instead.
@@ -1860,7 +1860,7 @@ Nate.[/i]".
 Some secret-plans are in the locker. They are privately-named.
 	The printed name is "plans".
 	Understand "plan" or "plans" as the secret-plans.
-	The description of the secret-plans is "The plans are rolled up and stuck shut with a label that reads 'PROPERTY OF DENTAL CONSONANTS LIMITED [--] UNAUTHOR[IZE]D USE ILLEGAL'. They're just a set of prints from the main computer design, of course, but still extremely informative: to the right engineer, they might reveal the secret of T-insertion for replication by other companies. These are what you and Brock were originally contracted to lift from the island, at a fee in the multiple millions.". The secret-plans are essential, illegal, floppy, and long. Understand "tube" as the secret-plans when the tube is marked invisible. Understand "label" as the secret-plans.
+	The description of the secret-plans is "The plans are rolled up and stuck shut with a label that reads 'PROPERTY OF DENTAL CONSONANTS LIMITED [--] UNAUTHOR[IZE]D USE ILLEGAL'. They're just a set of prints from the main computer design, of course, but still extremely informative: to the right engineer, they might reveal the secret of T-insertion for replication by other companies. These are what you and Brock were originally contracted to lift from the island, at a fee in the multiple millions.". The secret-plans are essential, illegal, floppy, and long. Understand "tube" as the secret-plans when the tube is not visible. Understand "label" as the secret-plans.
 
 [We need these variables to keep track of the smuggled plans across several transformations, in particular when synthesized with other items, in order to print (really the smuggled plans in disguise) after the correct object in the inventory.]
 The secret-plans has an object called the derivate. The derivate of the secret-plans is the secret-plans.
@@ -2291,7 +2291,7 @@ Instead of examining the view of jagged wall when we have not examined the fossi
 
 The view of jagged wall is a distant backdrop in Crumbling Wall Face. It screens north. The printed name is "broken edge".
 
-The description is "The masonry has broken away, revealing the rubble fill inside the wall and making a dangerously unstable surface of craggy rocks.". Understand "edge" or "broken" or "rubble" or "craggy" or "rocks" or "gravel" or "unstable" or "jagged" or "masonry" as the view of jagged wall. Understand "rock" as the view of jagged wall when the rock is marked invisible and the fossil is marked invisible.
+The description is "The masonry has broken away, revealing the rubble fill inside the wall and making a dangerously unstable surface of craggy rocks.". Understand "edge" or "broken" or "rubble" or "craggy" or "rocks" or "gravel" or "unstable" or "jagged" or "masonry" as the view of jagged wall. Understand "rock" as the view of jagged wall when the rock is not visible and the fossil is not visible.
 
 The safety railing is scenery in Crumbling Wall Face. The description is "Though it shows traces of surface rust, the safety railing is sturdy and close-fitted enough to prevent anyone, child or adult, from taking a tumble down the jagged masonry.". Understand "rail" as the safety railing.
 
@@ -2506,7 +2506,7 @@ Rule for printing the name of the pink door when waving the letter-remover at th
 	say "door";
 
 Rule for printing the name of the pink door when not waving the letter-remover at the pink door:
-	if the the pink door is marked-visible:
+	if the the pink door is visible:
 		say "door here";
 	otherwise:
 		say "door of my parents['] villa".

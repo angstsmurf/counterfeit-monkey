@@ -41,7 +41,7 @@ To say still-too-long:
 To stow gear:
 	let L be a list of things;
 	repeat with item running through things which are enclosed by the player:
-		if the item is marked-visible and the item is illegal and the item is not enclosed by the backpack:
+		if the item is visible and the item is illegal and the item is not enclosed by the backpack:
 			add item to L;
 	if the number of entries in L is positive:
 		say "Before approaching the secretary ahead, we try to hide all our illegal things in the backpack.";

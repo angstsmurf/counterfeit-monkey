@@ -222,7 +222,6 @@ Include (-
 				how_many_people_here++;
 				if(how_many_people_here >= 71) rfalse;
 				people_present --> how_many_people_here = o;
-				give o (+ marked-visible +);
 		}
 
 		!Check any components recursively
@@ -235,12 +234,10 @@ Include (-
 		if (child(o)) o = child(o);
 		else
 			while (o) {
-
 				if (sibling(o)) { o = sibling(o); break; }
 
 				o = parent(o);
 				if ( o == parent(start)) rtrue;
-
 			}
 	}
 	rtrue;

@@ -372,7 +372,7 @@ also-tourist is a weakly-phrased beat-opened NPC-directed quip.
 just-got-here is a weakly-phrased NPC-directed quip.
 	The reply is "[one of]'You probably know more about that than I do,' says [the current interlocutor]. 'I just got here.'[or][ignorance][stopping]".
 
-Instead of a native person discussing a location-questioning quip when the guidebook is marked-visible and the current interlocutor does not recollect try-guidebook:
+Instead of a native person discussing a location-questioning quip when the guidebook is visible and the current interlocutor does not recollect try-guidebook:
 	try the person asked discussing try-guidebook.
 
 Instead of someone discussing a location-questioning quip when the person asked recollects at least three location-questioning quips:
@@ -541,7 +541,7 @@ Instead of discussing where there seems pub when the location is Counterfeit Mon
 			say "[first custom style]That does not seem to be a topic of conversation at the moment.[roman type][paragraph break]".
 
 suggest-tourist-information is an NPC-directed quip.
-	The reply is "[if current interlocutor is attendant and guidebook is marked-visible]'You're welcome to that Guidebook, you know. It has a lot of spare information.'[otherwise]'If you have trouble finding your way, you can ask other people on the way.'[end if]"
+	The reply is "[if current interlocutor is attendant and guidebook is visible]'You're welcome to that Guidebook, you know. It has a lot of spare information.'[otherwise]'If you have trouble finding your way, you can ask other people on the way.'[end if]"
 
 
 ask-someone-else is an NPC-directed quip.
@@ -1782,7 +1782,7 @@ Understand "strike [something] with [something]" as attacking it with.
 Understand "homonym [something]" or "homonym" or "homonym-convert" or "homonym-convert [something]" or "homonym-paddle [something]" or "paddle [something]" or "convert [something]" as homonyming. Homonyming is an action applying to one visible thing.
 
 Rule for supplying a missing noun while homonyming:
-	if programmable dais is marked-visible:
+	if programmable dais is visible:
 		now noun is a random thing on programmable dais;
 		if noun is nothing:
 			now the noun is the player;
@@ -1794,7 +1794,7 @@ Carry out homonyming something:
 	if the actor is the bartender:
 		carry out the refusing comment by activity with the bartender;
 		the rule succeeds;
-	if programmable dais is marked-visible:
+	if programmable dais is visible:
 		if the noun is not on programmable dais and the noun is not the player:
 			try putting the noun on programmable dais;
 			if the noun is not on programmable dais:
@@ -1803,7 +1803,7 @@ Carry out homonyming something:
 			try turning the massive switch;
 		try switching on the programmable dais instead;
 	otherwise:
-		if bartender is marked-visible:
+		if bartender is visible:
 			try the player showing the noun to the bartender instead;
 	say "Exactly how do [we] intend to do that?";
 
@@ -2023,7 +2023,7 @@ Rule for beat-producing when the current interlocutor is Kate:
 		if N is:
 			-- 1:
 				say "[one of][The map-customer] asks Kate's advice about one of the maps[or]Kate confers with [the map-customer] in hushed tones[at random].[run paragraph on]";
-			-- 2: say "[one of][The map-customer] edges past you and Kate to get a look at one of the other maps[or][The map-customer] ponders [a random marked-visible scenery thing][at random].[run paragraph on]";
+			-- 2: say "[one of][The map-customer] edges past you and Kate to get a look at one of the other maps[or][The map-customer] ponders [a random visible scenery thing][at random].[run paragraph on]";
 			-- 3: say "[idle of the map-customer][run paragraph on]";
 			-- 4: say "[The map-customer] [one of]stops browsing and leaves[or]seems to have seen enough, and goes out[or]thanks Kate and goes out[or]heads out the door[at random].";
 				now the map-customer is nowhere;
@@ -2717,7 +2717,7 @@ whether public transport exists here is a questioning quip.
 	It is background-information.
 
 Availability rule for whether we can keep the guidebook:
-	if the guidebook is marked invisible, it is off-limits;
+	if the guidebook is not visible, it is off-limits;
 	make no decision.
 
 whether we can keep the guidebook is a questioning quip.
@@ -3553,7 +3553,7 @@ warn the activist about term-reassignment is a performative quip.
 	It quip-supplies the activist.
 	It directly-follows whether this liquid will be water.
 
-After reading a command when the activist is marked-visible and point out that being from language studies is available (this is the change point out to language rule):
+After reading a command when the activist is visible and point out that being from language studies is available (this is the change point out to language rule):
 	if the player's command includes "point out" or the player's command includes "point":
 		replace the matched text with "language".
 
@@ -3688,7 +3688,7 @@ A plausibility rule for whether he hath seen slango when game is in progress and
 challenge Parker about the rum is a performative quip.
 	The comment is "'Must be a different Slango,' we say. 'Mine is more of a root beer man. Thanks anyway though[slango-friendship].'".
 	[The mentions-list is {Slango}.]
-	The reply is "'Oh, [i]that[/i] Slango,' Parker says[if the origin paste is marked-visible and the origin paste is not seen], thoughtfully moving [the origin paste] sitting on the bar[end if]. 'He's been around town the last couple of days, but not today. If you know his lady friend[lena-needed], you might try her.' [paragraph break]Lady friend? [if the Aquarium is visited]Lena, presumably, but you didn't real[ize] she and Slango had progressed to quite that status[otherwise]This can only mean Lena, she being the only female native with whom Slango spends much time socially. But you wouldn't have guessed that she'd advanced to the status of [i]lady friend[/i]. Either way, Lena is a rather odd woman who keeps a used bookstore off Deep Street[end if].".
+	The reply is "'Oh, [i]that[/i] Slango,' Parker says[if the origin paste is visible and the origin paste is not seen], thoughtfully moving [the origin paste] sitting on the bar[end if]. 'He's been around town the last couple of days, but not today. If you know his lady friend[lena-needed], you might try her.' [paragraph break]Lady friend? [if the Aquarium is visited]Lena, presumably, but you didn't real[ize] she and Slango had progressed to quite that status[otherwise]This can only mean Lena, she being the only female native with whom Slango spends much time socially. But you wouldn't have guessed that she'd advanced to the status of [i]lady friend[/i]. Either way, Lena is a rather odd woman who keeps a used bookstore off Deep Street[end if].".
 	It quip-supplies the barman.
 	It directly-follows whether he hath seen slango.
 Understand "barman" or "him" or "bartender" as challenge Parker about the rum.
@@ -3854,7 +3854,7 @@ Instead of showing something (called the item) to the barman when the wager is n
 
 Every turn when the location is Counterfeit Monkey and the wager is not the player and the paste is not won:
 	repeat with item running through things which are proffered by the wager:
-		if the item is marked-visible:
+		if the item is visible:
 			now the proposed solution is the item;
 			follow the wager-judging rule;
 			if the rule succeeded:
@@ -4261,22 +4261,22 @@ A first conversation-reply rule when the current interlocutor is Lena:
 	let needs more conversation be true;
 	if Lena is urgently eager-to-speak:
 		let needs more conversation be false;
-	if (the single ream is undisguised and the single ream is marked-visible) or (the odes-book is undisguised and the odes-book is marked-visible):
+	if (the single ream is undisguised and the single ream is visible) or (the odes-book is undisguised and the odes-book is visible):
 		if Lena does not recollect needs-disguise:
 			queue needs-disguise as postponed optional; [She'll only say this once.]
-	if (the single ream is undisguised and the single ream is marked-visible) or (the odes-book is undisguised and the odes-book is marked-visible) and Lena recollects needs-disguise:
+	if (the single ream is undisguised and the single ream is visible) or (the odes-book is undisguised and the odes-book is visible) and Lena recollects needs-disguise:
 		if Lena does not recollect still-needs-pasting or a random chance of 1 in 3 succeeds:
 			queue still-needs-pasting as postponed optional;
 	if needs more conversation is false:
 		make no decision;
 	[positive feedback before negative...]
-	if the single ream is marked-visible and Lena does not recollect ream-approval:
+	if the single ream is visible and Lena does not recollect ream-approval:
 		queue ream-approval as immediate obligatory;
-	if the odes-book is marked-visible and Lena does not recollect odes-approval:
+	if the odes-book is visible and Lena does not recollect odes-approval:
 		queue odes-approval as immediate obligatory;
-	if the origin paste is marked-visible:
+	if the origin paste is visible:
 		casually queue nice-paste;
-	if the odes-book is marked-visible and the ream is marked-visible and the ream is disguised and the odes-book is disguised and Lena does not know trust-me:
+	if the odes-book is visible and the ream is visible and the ream is disguised and the odes-book is disguised and Lena does not know trust-me:
 		queue that-does-it as immediate obligatory;
 	if the modem is enclosed by location and Lena is not urgently eager-to-speak:
 		if Lena does not recollect modem-complaint or a random chance of 1 in 3 succeeds:
@@ -4292,16 +4292,16 @@ A first conversation-reply rule when the current interlocutor is Lena:
 	if the reams are enclosed by location and Lena is not urgently eager-to-speak:
 		if Lena does not recollect reams-complaint or a random chance of 1 in 3 succeeds:
 			queue reams-complaint as immediate obligatory;
-	if the reams are enclosed by location and the modems are marked-visible and Lena is not urgently eager-to-speak:
+	if the reams are enclosed by location and the modems are visible and Lena is not urgently eager-to-speak:
 		if Lena does not recollect task-reminder or a random chance of 1 in 3 succeeds:
 			queue task-reminder;
-	if the modems are marked-visible and Lena is not urgently eager-to-speak:
+	if the modems are visible and Lena is not urgently eager-to-speak:
 		if Lena does not recollect modems-complaint or a random chance of 1 in 3 succeeds:
 			queue modems-complaint as immediate obligatory;
-	if the preamps are marked-visible and Lena is not urgently eager-to-speak:
+	if the preamps are visible and Lena is not urgently eager-to-speak:
 		if Lena does not recollect preamps-complaint or a random chance of 1 in 3 succeeds:
 			queue preamps-complaint as immediate obligatory;
-	if the monocle is marked-visible and Lena is not urgently eager-to-speak and lena recollects who we seem-3:
+	if the monocle is visible and Lena is not urgently eager-to-speak and lena recollects who we seem-3:
 		if Lena does not recollect monocle-remark:
 			queue monocle-remark;
 	[say "NMC True: ";
@@ -4317,7 +4317,7 @@ task-reminder is an NPC-directed quip.
 	The reply is "[one of]Lena looks from us to [the list of things *in the contraband box]. 'So maybe you could do something with these,' she says, looking at us sidelong. I can tell she's starting to wonder whether we're legitimate[or]'If you need to get some tools or something, I'll still be here,' Lena comments. Honestly I am surprised she's so patient about our slowness on her little test[or]Lena looks us up and down as though trying to reconfigure our face into your face, the one she knows[or]Lena is waiting for us to do something to change [the list of things *in the contraband box].[stopping]."
 
 modems-complaint is an NPC-directed quip.
-	The reply is "[one of][if the odes-book is seen]'Let's go back to the odes,' Lena suggests.[otherwise if the preamps are marked-visible]'Try doing something with the modems,' Lena suggests.[otherwise]'Now the modems,' says Lena. 'Unless you're too tired.'[end if][or]Lena awaits your attention to the modems.[stopping]".
+	The reply is "[one of][if the odes-book is seen]'Let's go back to the odes,' Lena suggests.[otherwise if the preamps are visible]'Try doing something with the modems,' Lena suggests.[otherwise]'Now the modems,' says Lena. 'Unless you're too tired.'[end if][or]Lena awaits your attention to the modems.[stopping]".
 
 modem-complaint is an NPC-directed quip.
 	The reply is "[one of]Lena regards the solitary modem unsympathetically. 'Well, it's shrunk,' she says. 'But that doesn't make it look like what it isn't.'[or]Lena continues to look at the modem with distaste.[stopping]".
@@ -4373,7 +4373,7 @@ The door slams behind her and she comes back over[or]Lena taps her finger agains
 	rule succeeds.
 
 needs-disguise is an NPC-directed quip.
-	The reply is "'Of course,' she says, contemplating [the list of undisguised fake disguisable marked-visible things], 'this will be pointless unless we can also fool an authentication scope.'"
+	The reply is "'Of course,' she says, contemplating [the list of undisguised fake disguisable visible things], 'this will be pointless unless we can also fool an authentication scope.'"
 
 what she kens about authentication scopes is an unlisted repeatable questioning quip.
 	The printed name is "what she knows about authentication scopes". Understand "knows" or "know" as what she kens about authentication scopes.
@@ -4540,7 +4540,7 @@ A plausibility rule for how Professor Brown makes abstracts:
 	it is plausible.
 
 Availability rule for whether he can fix the letter-remover:
-	if the letter-remover is marked invisible, it is off-limits.
+	if the letter-remover is not visible, it is off-limits.
 
 Plausibility rule for whether he can fix the letter-remover:
 	if Professor Brown does not recollect how Professor Brown makes abstracts, it is dubious.
@@ -4726,7 +4726,7 @@ She pulls up short, apparently remembering that she doesn't, actually, know us a
 	It indirectly-follows how Professor Higgate seems doing.
 
 An availability rule for what the romance novel might be:
-	if heart to heart is marked invisible:
+	if heart to heart is not visible:
 		it is off-limits.
 
 what the romance novel might be is a questioning quip.
@@ -4877,11 +4877,11 @@ A first conversation-reply rule when the current interlocutor is professor Water
 	if the player does not recollect please-get-out and please-get-out is not listed in the planned conversation of Professor Waterstone and Professor Waterstone recollects at least two quips:
 		queue please-get-out as postponed obligatory.
 
-After reading a command when Waterstone is marked-visible and make up some excuse is available (this is the replace make with excuse rule):
+After reading a command when Waterstone is visible and make up some excuse is available (this is the replace make with excuse rule):
 	if the player's command includes "make":
 		replace the matched text with "excuse".
 
-Instead of saying yes when Waterstone is marked-visible and make up some excuse is available:
+Instead of saying yes when Waterstone is visible and make up some excuse is available:
 	try discussing make up some excuse.
 
 make up some excuse is a performative quip.
@@ -4965,8 +4965,7 @@ Through the window in Waterstone's door, we can see him turning the lock. When h
 	now office-door-1 is closed;
 	now office-door-1 is locked;
 	[try Waterstone closing office-door-1;
-	try Waterstone locking office-door-1 with od-key;
-	carry out the caching scope activity with the player;]
+	try Waterstone locking office-door-1 with od-key;]
 	if the department printer is switched on:
 		say "[line break]A moment later the printer whirs thoughtfully.";
 	now the draft document is pending;
@@ -5077,7 +5076,6 @@ This is the random-commentary rule:
 The Brock-suggestion rules are a rulebook.
 
 First Brock-suggestion rule:
-	[carry out the caching scope activity with brock;]
 	if Brock-argument is not happening:
 		rule succeeds;
 	if the time since Brock-argument began is less than 1 minute:
@@ -5119,7 +5117,7 @@ A Brock-suggestion rule when find noisy thing is not nothing:
 	try Brock discussing interference-gelling;
 	rule succeeds.
 
-A Brock-suggestion rule when a self-object is marked-visible and Brock does not recollect surprisingly-handsome:
+A Brock-suggestion rule when a self-object is visible and Brock does not recollect surprisingly-handsome:
 	try Brock discussing surprisingly-handsome;
 	rule succeeds.
 
@@ -5128,11 +5126,11 @@ A Brock-suggestion rule when a fake person is in location:
 		if a random chance of 1 in 3 succeeds:
 			say "[creepy stare][run paragraph on]";
 		otherwise:
-			say "[The random marked-visible fake person] [stare] at us. [run paragraph on]";
+			say "[The random visible fake person] [stare] at us. [run paragraph on]";
 		try Brock discussing getting-crowded;
 		rule succeeds.
 
-A Brock-suggestion rule when a naughty-sounding thing which is not the cock-ring is marked-visible:
+A Brock-suggestion rule when a naughty-sounding thing which is not the cock-ring is visible:
 	if Brock does not recollect naughty-remark:
 		try Brock discussing naughty-remark;
 		rule succeeds.
@@ -5325,7 +5323,7 @@ Instead of showing a self-object to Brock:
 	try Brock discussing surprisingly-handsome.
 
 surprisingly-handsome is an NPC-directed quip.
-	The reply is "He cocks his head to look at [the random marked-visible self-object]. 'I have surprisingly good hair for someone who has just been a rock.'
+	The reply is "He cocks his head to look at [the random visible self-object]. 'I have surprisingly good hair for someone who has just been a rock.'
 
 'Objects in mirror may appear more attractive than they are,' we remark."
 
@@ -5334,13 +5332,13 @@ getting-out-now is an NPC-directed quip.
 
 You start to object, but I say, 'Yes, you'd better return to petrified form.' You know I'm right. He'll be easier to carry.
 
-A little grimly, he produces his own letter-remover and repeats the B-removal that made him in the first place[if a fake person is marked-visible]. We're alone with [the list of marked-visible fake people][otherwise]. Once again we're alone in a room with a rock[end if]."
+A little grimly, he produces his own letter-remover and repeats the B-removal that made him in the first place[if a fake person is visible]. We're alone with [the list of visible fake people][otherwise]. Once again we're alone in a room with a rock[end if]."
 
 interference-gelling is an NPC-directed quip.
 	[The reply is "'[one of]Just in case anyone out there is listening[or]Let's try to keep the noise to a minimum[or]That's more peaceful[at random].'"]
 
 naughty-remark is an NPC-directed quip.
-	The reply is "He eyes [the random naughty-sounding marked-visible thing which is not the cock-ring]. 'Oh for a homonym paddle.'"
+	The reply is "He eyes [the random naughty-sounding visible thing which is not the cock-ring]. 'Oh for a homonym paddle.'"
 
 getting-crowded is an NPC-directed quip.
 	The reply is "[one of]Brock steps to the side to make room for [the list of fake people *in location][or]'We're going to need to install stadium seating in here,' Brock comments, nodding at [the list of fake people *in location][or]'If any guards come, we can use [the random fake person in location] as a decoy,' Brock remarks[at random]."
@@ -5435,7 +5433,6 @@ Instead of waiting in the presence of my mother:
 	say "[beat][line break][paragraph break]".
 
 Rule for beat-producing when the current interlocutor is my mother:
-	[carry out the caching scope activity with my mother;]
 	say run paragraph on;
 	let N be a random refrigerator which is in my apartment;
 	if the player wears the monocle and the player does not recollect monocle-comment:
@@ -5450,7 +5447,7 @@ Rule for beat-producing when the current interlocutor is my mother:
 	otherwise if my mother carries something (called impediment):
 		let goal be a random furniture counter which is in my apartment;
 		try my mother dumping inventory on the goal;
-	otherwise if a switched on thing (called danger) is marked-visible:
+	otherwise if a switched on thing (called danger) is visible:
 		try my mother switching off the danger;
 	otherwise:
 		let target be random-visible-thing;
@@ -5538,7 +5535,6 @@ Confrontation-with-mother is a scene. Confrontation-with-mother begins when my m
 
 When confrontation-with-mother begins:
 	say "We're about to, when the door to the street opens and my mother walks into the room. She shuts it behind her and puts away her key before she notices us. Then she stands very still. For about a quarter second she considers calling the police, but I can see that worry passing away again as she takes in our clothing, age, and general demean[our].";
-	now my mother is marked-visible;
 	set the current interlocutor to my mother;
 	try my mother discussing hi-there-Im;
 	queue final-goodbye as postponed obligatory.
@@ -5548,10 +5544,10 @@ hi-there-Im is an NPC-directed quip.
 	The nag is "Mother just stands there with an arched eyebrow. Any minute now I'm going to blurt something out through sheer force of habit."
 	It is restrictive.
 
-Instead of saying no when my mother is marked-visible and we're his girlfriend is available:
+Instead of saying no when my mother is visible and we're his girlfriend is available:
 	say "What are the other options, really? Shall we claim to be burgling my apartment? To be a roommate she's never heard of, who is living with furniture that obviously isn't here? To be the gas man, a fire inspector, the police? None of that has a hope of working."
 
-Instead of saying yes when my mother is marked-visible and we're his girlfriend is available:
+Instead of saying yes when my mother is visible and we're his girlfriend is available:
 	try discussing we're his girlfriend.
 
 we're his girlfriend is an informative quip.
@@ -5574,7 +5570,7 @@ claim to hath seen him this morning is a performative quip.
 	It quip-supplies My mother.
 	It directly-follows we're his girlfriend.
 
-Instead of shrugging when my mother is marked-visible and we don't ken is available:
+Instead of shrugging when my mother is visible and we don't ken is available:
 	try discussing we don't ken.
 
 we don't ken is an informative quip.
@@ -5611,7 +5607,7 @@ we wouldn't do anything dangerous is an informative quip.
 	It quip-supplies my mother.
 	It directly-follows suggest the truth.
 
-Instead of saying no when my mother is marked-visible and probably nothing is available:
+Instead of saying no when my mother is visible and probably nothing is available:
 	try discussing probably nothing.
 
 probably nothing is an unlisted weakly-phrased informative quip.
@@ -5624,7 +5620,7 @@ probably nothing is an unlisted weakly-phrased informative quip.
 not-planning-dinner is an NPC-directed quip.
 	The reply is "'Evidently not planning to have dinner at home this evening,' she comments."
 
-Instead of saying no or saying yes when my mother is marked-visible and explain we might go out is available:
+Instead of saying no or saying yes when my mother is visible and explain we might go out is available:
 	try discussing explain we might go out.
 
 explain we might go out is a performative quip.
@@ -5635,7 +5631,7 @@ explain we might go out is a performative quip.
 	It is restrictive.
 	It directly-follows not-planning-dinner.
 
-Instead of shrugging when my mother is marked-visible and  claim he didn't say  is available:
+Instead of shrugging when my mother is visible and  claim he didn't say  is available:
 	try discussing  claim he didn't say .
 
 claim he didn't say is a weakly-phrased performative quip.
@@ -5686,7 +5682,6 @@ She's not even visible through the window any longer.";
 Section 10 - Father
 
 After going from the Sensitive Equipment Testing Room:
-	now father is marked-visible;
 	set the current interlocutor to father;
 	continue the action.
 
@@ -5748,10 +5743,10 @@ lay out our reasons is a performative quip.
 	It quip-supplies father.
 	It directly-follows what-are-you.
 
-Instead of saying no when father is marked-visible and be comforting is available:
+Instead of saying no when father is visible and be comforting is available:
 	try discussing be comforting.
 
-Instead of saying sorry when father is marked-visible and be comforting is available:
+Instead of saying sorry when father is visible and be comforting is available:
 	try discussing be comforting.
 
 be comforting is a weakly-phrased performative quip.
@@ -5998,7 +5993,7 @@ how fusion happens is a questioning quip.
 	Understand "fused" or "what has happened" or "what happened" or "happened" or "chance" or "explanation" or "separation" or "us" or "ourselves" or "stuck" or "gel rifle" as how fusion happens.
 
 thing-about-democracy is an NPC-directed quip.
-	The reply is "Atlantida smiles with half a mouth. 'You've arrived on a difficult day. In the ordinary course of things, I keep things quiet: the spirit of democracy, but none of the sordid wrangling and bribes and corruption and compromise. It's only when the spirit of the island itself is threatened, that we have to resort to such extreme measures[casually queue more-about-democracy][if the infertile astrologer is marked-visible].'
+	The reply is "Atlantida smiles with half a mouth. 'You've arrived on a difficult day. In the ordinary course of things, I keep things quiet: the spirit of democracy, but none of the sordid wrangling and bribes and corruption and compromise. It's only when the spirit of the island itself is threatened, that we have to resort to such extreme measures[casually queue more-about-democracy][if the infertile astrologer is visible].'
 
 The infertile astrologer sidles closer to us, smiling and making hand signs that I think are supposed to represent Aries. Old bat.[otherwise].'[end if]"
 
@@ -6094,7 +6089,7 @@ After shooting something with the anagramming gun in the presence of atlantida-w
 Is-it-commentary is an NPC-directed quip.
 	The reply is "She makes a disgusted face. 'I hope you're planning to clean that up.'"
 
-Instead of Atlantida-woman discussing is-it-commentary when atlantida-woman carries the restoration-gel rifle and the sickest offal is marked-visible:
+Instead of Atlantida-woman discussing is-it-commentary when atlantida-woman carries the restoration-gel rifle and the sickest offal is visible:
 	say "She looks annoyed and shoots the offal. ";
 	gel-convert the offal;
 	say "[one of]'As political commentary, that wasn't very well-conceived.'[or]'I have plenty of ammunition in this rifle,' she remarks.[or]This time she doesn't bother to comment.[stopping]".
@@ -6113,7 +6108,7 @@ After shooting something with the anagramming gun in the presence of atlantida-w
 barely-acknowledges is an NPC-directed quip.
 	The reply is "Atlantida's glance flickers towards the ladies, but she barely acknowledges them."
 
-Instead of atlantida-woman discussing barely-acknowledges when atlantida-woman carries the restoration-gel rifle and the kind ladies are marked-visible:
+Instead of atlantida-woman discussing barely-acknowledges when atlantida-woman carries the restoration-gel rifle and the kind ladies are visible:
 	say "[one of]'Is [--] is there anything I could do to assist?' asks one of the ladies. 'It looks as though you two are having a bit of a disagreement. Maybe if we all sat down together and talked about what we are feeling [--]'[or]This time one of the ladies offers a muffin.[no line break][or]The ladies back nervously against the wall, except one who says, 'I still think we could work this out.'[no line break][or]The ladies are cowed but regard us with mute hope.[no line break][stopping]
 
 Atlantida [one of]rolls her eyes and fires the weapon, hitting the lady speaking neatly in the middle of the forehead. She doesn't seem much bothered by the idea that these fake people are essentially her own kind, really[or]casually shoots the speaker again[or]picks off the ladies with her rifle[stopping]. [run paragraph on]";
@@ -6426,15 +6421,5 @@ When Guard-capture ends in capture:
 
 [We] [are] captured and taken away for interrogation, and it's some time before Atlantida is able to arrange for our release.";
 	abide by the game-ending rule.
-
-
-Chapter 4 - Subject visibility bug
-
-[There is a bug where conversation subjects can randomly become marked as visible, causing all kinds of trouble. Until the root cause is found, this counters it.]
-
-A first every turn rule when geography is marked-visible:
-	repeat with N running from 1 to subject count:
-		unless subject-number N is enclosed by location:
-			now subject-number N is marked invisible.
 
 Animal Actions and Human Conversation ends here.

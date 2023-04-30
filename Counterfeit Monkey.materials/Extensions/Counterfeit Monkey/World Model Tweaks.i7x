@@ -284,16 +284,6 @@ Check inserting something heavy into something when the carrying capacity of the
 	unless the second noun is the t-inserter:
 		say "[The noun] [are] too big to fit into [the second noun]." instead.
 
-After opening an opaque container (called the box):
-	if the box is open:
-		mark contents of box visible;
-		continue the action.
-
-After closing an opaque container (called the box):
-	if the box is closed:
-		mark contents of box invisible;
-		continue the action.
-
 Sanity-check giving something held by someone (called the target) to the target:
 	say "[The target] already [have] [the noun]." instead.
 
@@ -1142,7 +1132,7 @@ Understand "drive to [any nonsecret room]" as approaching.
 
 Understand "drive [car] to [any nonsecret room]" as car-approaching. Car-approaching is an action applying to one thing and one visible thing. Carry out car-approaching: try approaching the second noun.
 
-Understand "honk" or "honk at [text]" as a mistake ("[if the player is not in a car]We aren't a goose[otherwise if the protesters are marked-visible]One of the protesters turns and waves, taking this as a gesture of support[otherwise]We receive an insulting gesture from the person in the car ahead[end if].").
+Understand "honk" or "honk at [text]" as a mistake ("[if the player is not in a car]We aren't a goose[otherwise if the protesters are visible]One of the protesters turns and waves, taking this as a gesture of support[otherwise]We receive an insulting gesture from the person in the car ahead[end if].").
 
 Understand "protest" or "join protest" or "picket" as a mistake ("If I thought you could change Atlantis that way, I'd be on board. But I've given up on social action long since.").
 
@@ -1184,9 +1174,9 @@ Instead of taking a car:
 Understand "fuel [something] with [something preferably held]" as fueling it with. Understand "fuel [something]" as fueling it with. Fueling it with is an action applying to one thing and one carried thing.
 
 Rule for supplying a missing second noun while fueling something with:
-	if the fuel is marked-visible:
+	if the fuel is visible:
 		now the second noun is the fuel;
-	otherwise if the gas is marked-visible:
+	otherwise if the gas is visible:
 		now the second noun is the gas;
 	otherwise:
 		say "[We] don't have any plausible fuel to hand."
@@ -1430,7 +1420,7 @@ Instead of entering traffic:
 Instead of climbing the scaffolding:
 	say "I wasn't a construction worker in previous life, and I'm pretty sure you weren't either." ]
 
-Understand "cross [traffic]" or "ignore [traffic]" as a mistake ("You may have the nerve, but I don't.") when the traffic is marked-visible.
+Understand "cross [traffic]" or "ignore [traffic]" as a mistake ("You may have the nerve, but I don't.") when the traffic is visible.
 
 Test car-behavior with "tutorial off / car-acquire / unmonkey / put remover in backpack / close backpack / cross traffic / ignore traffic / drive to roundabout / park / get out of car / go to deep street / nw / e / climb masses / look through window / out / out / se / get in car / drive to tall street / go to roundabout / drive to monkey" holding the backpack in high street.
 
@@ -1561,7 +1551,7 @@ This is the don't-leave-the-unleavable rule:
 			try opening the box;
 		if the needed-thing is the iron-pans:
 			reduce iron-pans;
-			if the i-pan is marked-visible:
+			if the i-pan is visible:
 				now the needed-thing is the i-pan;
 		if the needed-thing is a person:
 			move needed-thing to the holder of the player;
@@ -1909,7 +1899,7 @@ Rule for disclosing contents of a desk (called special-target):
 An office is a kind of room. One desk and one chair are in every office. An office is usually indoors.
 
 Sanity-check sitting at a desk:
-	if a chair (called target chair) which does not support a person is marked-visible:
+	if a chair (called target chair) which does not support a person is visible:
 		try entering the target chair instead.
 
 Section 7 - Outdoor Rooms and Digging
@@ -1989,13 +1979,13 @@ The guidebook-consulting action has an object called the implied textbook.
 
 Setting action variables for guidebook-consulting:
 	now the implied textbook is the player;
-	if the player's command includes "[number]" and the filing cabinet is marked-visible:
+	if the player's command includes "[number]" and the filing cabinet is visible:
 		now the implied textbook is the filing cabinet;
-	otherwise if the guidebook is marked-visible:
+	otherwise if the guidebook is visible:
 		now the implied textbook is the guidebook;
 	otherwise if the player carries a book:
 		now the implied textbook is a random book carried by the player;
-	otherwise if a book (called the target) is marked-visible:
+	otherwise if a book (called the target) is visible:
 		now the implied textbook is the target.
 
 Check guidebook-consulting:
@@ -2227,16 +2217,16 @@ Sanity-check performing vaguely on something:
 	try performing the player on the noun instead.
 
 Rule for supplying a missing second noun while performing something on:
-	if an instrument (called target instrument) is marked-visible:
+	if an instrument (called target instrument) is visible:
 		now the second noun is the target instrument;
 	otherwise:
-		if game-selection is marked-visible:
+		if game-selection is visible:
 			now the second noun is the game-selection;
 		else:
-			if computer-game-selection is marked-visible:
+			if computer-game-selection is visible:
 				now the second noun is the computer-game-selection;
 			else:
-				if the projector is marked-visible:
+				if the projector is visible:
 					now the second noun is the projector;
 				else:
 					say "There's no instrument handy." instead.
@@ -2261,7 +2251,7 @@ Understand "perform [text] on [something]" as improvising it on. Understand "per
 Understand "perform [text]" as improvising it on.
 
 Rule for supplying a missing second noun while improvising the topic understood on:
-	if an instrument (called target instrument) is marked-visible:
+	if an instrument (called target instrument) is visible:
 		now the second noun is the target instrument;
 	otherwise:
 		say "There's no instrument handy." instead.
@@ -2309,7 +2299,7 @@ Definition: a room is swimmable:
 		yes;
 	if it is nautical:
 		yes;
-	if the sea-view is marked-visible:
+	if the sea-view is visible:
 		yes;
 	no.
 
@@ -2373,7 +2363,7 @@ Understand the commands "attack" and "punch" and "destroy" and "kill" and "murde
 
 Attacking it with is an action applying to one thing and one carried thing. Understand "attack [something] with [something preferably held]" as attacking it with.
 
-Understand "punch [something] with [something preferably held]" as attacking it with when the umlaut punch is marked invisible and the mutual punch is marked invisible.
+Understand "punch [something] with [something preferably held]" as attacking it with when the umlaut punch is not visible and the mutual punch is not visible.
 
 Understand the commands "destroy" and "kill" and "murder" and "hit" and "thump" and "break" and "smash" and "torture" and "wreck" as "attack".
 
@@ -2397,7 +2387,7 @@ Definition: a thing is attackable:
 
 Understand "attack [something not attackable]" as attacking.
 
-Understand "punch [something not attackable]" as attacking when the umlaut punch is marked invisible and the mutual punch is marked invisible.
+Understand "punch [something not attackable]" as attacking when the umlaut punch is not visible and the mutual punch is not visible.
 
 Sanity-check attacking something which is not attackable with something:
 	try attacking the noun instead.

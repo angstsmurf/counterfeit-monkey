@@ -18,7 +18,7 @@ Use authorial modesty.
 
 Include version 1/140516 of Alternative Startup Rules by Dannii Willis.
 Include version 10/160919 of Glulx Entry Points by Emily Short.
-Include version 5/140516 of Glulx Text Effects by Emily Short.
+Include Glulx Text Effects by Emily Short.
 
 
 

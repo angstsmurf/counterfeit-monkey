@@ -6,7 +6,7 @@ Version 7 of Approaches by Emily Short begins here.
 
 To find is a verb. To lack is a verb. To head is a verb. To go is a verb.
 
-Include Version 6 of Locksmith by Emily Short.
+Include Locksmith by Emily Short.
 
 A person can be staid or hurrying. A person is usually staid.
 A room can be proper-named or improper-named.

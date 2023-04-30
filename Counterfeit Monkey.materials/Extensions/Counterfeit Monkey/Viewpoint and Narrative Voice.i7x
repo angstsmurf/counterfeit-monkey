@@ -75,7 +75,7 @@ The print obituary headline rule response (B) is " We have won ".
 The can't push people rule response (A) is "[We][']d rather not try it."
 The can't pull people rule response (A) is "[We][']d rather not try it."
 The can't turn people rule response (A) is "[We][']d rather not try it."
-The block buying rule response (A) is "[if the current interlocutor is a marked-visible person][The current interlocutor] [aren't] in a position to sell us [the noun][otherwise]There's no one about to sell us [the noun][end if]."
+The block buying rule response (A) is "[if the current interlocutor is a visible person][The current interlocutor] [aren't] in a position to sell us [the noun][otherwise]There's no one about to sell us [the noun][end if]."
 The report rubbing rule response (A) is "[nerve-damage]."
 The report squeezing rule response (A) is "[nerve-damage]."
 The block burning rule response (A) is "[We] don't have a flame source, and if [we] did I wouldn't want to set things on fire with it."

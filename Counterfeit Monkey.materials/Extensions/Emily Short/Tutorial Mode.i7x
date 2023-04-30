@@ -107,7 +107,7 @@ An instructional rule (this is the teach compass directions rule):
 	let way be nothing;
 	if a room (called goal) is adjacent:
 		let way be the best route from the location to the goal;
-	otherwise if an open door (called portal) is marked-visible:
+	otherwise if an open door (called portal) is visible:
 		let far side be the other side of the portal;
 		let way be the best route from the location to the far side;
 	otherwise:

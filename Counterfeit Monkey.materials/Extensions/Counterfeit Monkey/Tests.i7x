@@ -723,7 +723,6 @@ Understand "pound face" as testing facing. Testing facing is an action out of wo
 Carry out testing facing:
 	repeat with item running through rooms:
 		move the player to item;
-		carry out the caching scope activity with player;
 		say "[line break] north: ";
 		try facing north;
 		say "[line break] northwest: ";
@@ -758,7 +757,6 @@ Carry out testing insides:
 	repeat with item running through rooms:
 		say "(Testing insides and outsides of [item])";
 		move player to item;
-		carry out the caching scope activity with player;
 		say "> GO IN";
 		let way be in-direction of item;
 		if way is a direction:
@@ -955,7 +953,7 @@ This is the test blindfold-wearing rule:
 	try blindfold-wearing the noun.
 
 This is the test blindfolding rule:
-	let target be a random marked-visible person;
+	let target be a random visible person;
 	say "[italic type] blindfolding [target] with [the noun]: [roman type]";
 	try blindfolding the target with the noun.
 
@@ -1287,7 +1285,6 @@ Carry out ultratesting a topic:
 		if there is a setting entry:
 			say "Moving to [setting entry].";
 			move the player to the setting entry, without printing a room description;
-			carry out the caching scope activity with the player;
 		if there is a stuff entry:
 			repeat with item running through stuff entry:
 				say "Procuring [the item].";

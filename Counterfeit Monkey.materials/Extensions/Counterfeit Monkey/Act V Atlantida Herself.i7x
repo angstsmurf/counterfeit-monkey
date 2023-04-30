@@ -71,7 +71,7 @@ To say tourist-face:
 	otherwise:
 		say "[Random-passerby] is gazing curiously at [the random thing on the display-platform]";
 
-A hazard-tape is scenery in the Display Reloading Room. The description is "It's striped yellow and red, and describes an area on the floor. Come to that, there's an area in the ceiling immediately above the hazard tape that looks separate from the rest of the ceiling." The indefinite article of the hazard-tape is "some". The printed name of the hazard-tape is "[if looking]Hazard[otherwise]hazard[end if] tape". Understand "hazard tape" as the hazard-tape. Understand "tape" as the hazard-tape when the tape is marked invisible.
+A hazard-tape is scenery in the Display Reloading Room. The description is "It's striped yellow and red, and describes an area on the floor. Come to that, there's an area in the ceiling immediately above the hazard tape that looks separate from the rest of the ceiling." The indefinite article of the hazard-tape is "some". The printed name of the hazard-tape is "[if looking]Hazard[otherwise]hazard[end if] tape". Understand "hazard tape" as the hazard-tape. Understand "tape" as the hazard-tape when the tape is not visible.
 
 A small black push-button is fixed in place in the Display Reloading Room. The initial appearance is "There is [an item described] on the wall." Understand "button" or "push button" as the push-button. The description is "It is unlabeled."
 
@@ -154,7 +154,7 @@ Rule for printing the name of the odor while waving the letter-remover at the od
 	say "odor".
 
 Instead of going north in Wonderland when the secret-door is closed and the secret-door is seen:
-	if the secret-door is marked-visible:
+	if the secret-door is visible:
 		say "[The secret-door] is not open.";
 	otherwise:
 		say "[The secret-door] is not here."
@@ -288,7 +288,7 @@ This is the open-security rule:
 	say "[We] select the surveillance program. It brings up a menu of possible camera views. [run paragraph on]";
 	try examining security-program.
 
-Understand "search [text]" or "search for [text]" as typing it on when a computer which runs a search engine is marked-visible.
+Understand "search [text]" or "search for [text]" as typing it on when a computer which runs a search engine is visible.
 
 
 Test surveillance with "x computer / x screen / turn on computer / select security / select statue / click customs / click front exit / type tools exhibit / type interrogation rooms circuit / g / g / g /click cold storage / click porch / click dwelling / click north exit / click main / select requisitions / select power / select access / look up me in computer / search for me / search for alexandra / search for andra / search for slango / search for protest / search for arbot / search for pleice / search for lena / search for reports"
@@ -538,7 +538,7 @@ Definition: a thing is unhookable:
 [And to account for cases where you make an unhookable thing on the pulley via letter-manipulating something that was previously there:]
 
 Every turn when (the location is Tunnel through Chalk or location is Personal Apartment) and something unhookable is on the pulley (this is the portcullis empty rule):
-	if the pulley is marked-visible:
+	if the pulley is visible:
 		say "[The list of unhookable things *in the pulley] [fall] to the ground.";
 	now every unhookable thing on the pulley is in Tunnel through Chalk.
 
@@ -558,7 +558,7 @@ Check putting something on the pulley when the pulley is non-empty:
 Every turn when the portcullis is open and the counterweight is not on the pulley (this is the portcullis fall rule):
 	unless something wedges the portcullis:
 		now the portcullis is closed;
-		if the portcullis is marked-visible:
+		if the portcullis is visible:
 			say "The portcullis crashes shut."
 
 Check opening portcullis:
@@ -658,7 +658,7 @@ Instead of searching the stack of files:
 
 A rubber stamp is a thing on the inlaid desk. The description is "It is made to stamp two words: ETHICAL VETO. The discol[our]ation shows it has indeed been used, though not, perhaps, very recently."
 
-Understand "stamp [text]" as a mistake ("It seems unlikely that our tampering would go unnoticed.") when the rubber stamp is marked-visible.
+Understand "stamp [text]" as a mistake ("It seems unlikely that our tampering would go unnoticed.") when the rubber stamp is visible.
 
 The oil-paintings are scenery in Personal Apartment. They are plural-named. The printed name is "[if looking]Oil[otherwise]oil[end if] paintings". Understand "oil" or "painting" or "paintings" or "portraits" or "portrait" as the oil-paintings. The heft of the oil-paintings is 5. The description is "They look like originals. I have seen some of these portraits before, in books at school or in the museum, but was given to understand that they'd been stolen, leaving only photographs or replicas."
 
@@ -933,7 +933,7 @@ Check launching:
 
 Check launching:
 	if the player is not in the kayak:
-		if the kayak is marked-visible:
+		if the kayak is visible:
 			try entering the kayak;
 			if the player is in the kayak:
 				make no decision;
@@ -941,7 +941,7 @@ Check launching:
 
 Check launching:
 	if the player does not carry the oar:
-		if the the oar is marked-visible:
+		if the the oar is visible:
 			try taking the oar;
 			if the player carries the oar:
 				make no decision;

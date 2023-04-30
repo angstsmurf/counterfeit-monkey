@@ -874,7 +874,7 @@ Section 4 - Other People Discussing
 
 Carry out someone discussing (this is the everyone has heard rule):
 	[now every person who can see the person asked recollects the noun.]
-	if  the actor is marked-visible:
+	if  the actor is visible:
 		now the player recollects the noun;
 	now the actor recollects the noun. [This comes after the former line so that we can check whether we've repeated ourselves.]
 
@@ -1084,7 +1084,7 @@ To perform the/-- next queued conversation for (chosen person - a person):
 		remove the next topic from the planned conversation of the chosen person, if present.
 
 To perform the/-- (chosen precedence - a quip-precedence) conversation for every person:
-	if the current interlocutor is a person and the current interlocutor is marked-visible,
+	if the current interlocutor is a person and the current interlocutor is visible,
 		perform the chosen precedence conversation for the current interlocutor;
 		repeat with N running from 1 to how-many-people-here:
 			if present-person N is not the current interlocutor, perform the chosen precedence conversation for present-person N.
@@ -1097,7 +1097,7 @@ To perform the/-- (chosen precedence - a quip-precedence) conversation for (chos
 			remove the next topic from the planned conversation of the chosen person, if present.
 
 To perform the/-- next queued conversation for every person:
-	if the current interlocutor is a person and the current interlocutor is marked-visible,
+	if the current interlocutor is a person and the current interlocutor is visible,
 		perform the next queued conversation for the current interlocutor;
 	repeat with N running from 1 to how-many-people-here:
 		if present-person N is not the current interlocutor, perform the next queued conversation for present-person N.
@@ -1352,9 +1352,9 @@ Carry out someone trying hailing:
   try saying hello to the person asked.
 
 Check hailing (this is the check what's being hailed rule):
-	if the current interlocutor is a marked-visible person:
+	if the current interlocutor is a visible person:
 		say "You are already talking to [the current interlocutor]." instead;
-	now the noun is a random marked-visible other person;
+	now the noun is a random visible other person;
 	if the noun is a person:
 		say "(addressing [the noun])";
 	otherwise:
@@ -1431,7 +1431,7 @@ Carry out saying goodbye to something:
 Carry out the current interlocutor saying goodbye to the player:
 	reset the interlocutor.
 
-Check leavetaking when the current interlocutor is not a marked-visible person (this is the don't allow saying goodbye to no-one rule):
+Check leavetaking when the current interlocutor is not a visible person (this is the don't allow saying goodbye to no-one rule):
   say "You're not talking to anyone." instead.
 
 Carry out leavetaking:

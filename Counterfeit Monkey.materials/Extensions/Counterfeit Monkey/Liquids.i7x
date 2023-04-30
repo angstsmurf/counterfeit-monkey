@@ -300,15 +300,15 @@ Setting action variables for filling something with a switched on tap (this is t
 	now the second noun is the tap-water.
 
 Setting action variables for switching on when the noun is tap-water (this is the divert TURN OFF WATER rule):
-	if some switched off taps (called target taps) are marked-visible:
+	if some switched off taps (called target taps) are visible:
 		now the noun is the target taps;
-	otherwise if some taps (called target taps) are marked-visible:
+	otherwise if some taps (called target taps) are visible:
 		now the noun is the target taps.
 
 Setting action variables for switching off when the noun is tap-water (this is the divert TURN ON WATER rule):
-	if some switched on taps (called target taps) are marked-visible:
+	if some switched on taps (called target taps) are visible:
 		now the noun is the target taps;
-	otherwise if some taps (called target taps) are marked-visible:
+	otherwise if some taps (called target taps) are visible:
 		now the noun is the target taps.
 
 Sanity-check switching on a switched on tap:
@@ -378,7 +378,7 @@ Check an actor washing (this is the new block washing rule):
 The new block washing rule is listed instead of the block washing rule in the check washing rulebook.
 
 Last carry out an actor switching off a tap (called target tap) (this is the remove water supply rule):
-	if there is a marked-visible switched on tap which is part of a container (called target container):
+	if there is a visible switched on tap which is part of a container (called target container):
 		move tap-water to target container;
 	otherwise:
 		now tap-water is nowhere.

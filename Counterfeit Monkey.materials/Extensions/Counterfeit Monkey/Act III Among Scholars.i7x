@@ -267,12 +267,12 @@ Instead of inserting something into the toolkit:
 	say "[The toolkit] is full already."
 
 The description of the gimlets is "A gimlet is a hand-tool for drilling holes, like an auger but smaller. It is for piercing things and boring into them, anyway, which is presumably where the phrase 'gimlet-eyed' comes from. These are arranged into an attractive bouquet-shape."
-	Understand "gimlet" as the gimlets when the gimlet is marked invisible and the gimlet-drink is marked invisible.
+	Understand "gimlet" as the gimlets when the gimlet is not visible and the gimlet-drink is not visible.
 
 The description of the screwdrivers is "An assortment of plain screwdrivers, with strong metal shafts and plastic handles."
 
 The description of the rusty nails is "They're scattered around in the toolkit, presumably taken from a condemned building somewhere."
-	Understand "nail" as the rusty nails when the rusty nail is marked invisible and the rusty-nail-drink is marked invisible.
+	Understand "nail" as the rusty nails when the rusty nail is not visible and the rusty-nail-drink is not visible.
 
 A screwdriver is a thing. It is carried by the bartender. The description of the screwdriver is "The screwdriver is flat-headed, with a red plastic handle and a sturdy shaft." Understand "red" or "plastic" or "handle" or "shaft" or "sturdy" as the screwdriver. Understand "tool" as the screwdriver.
 
@@ -1426,7 +1426,7 @@ A description-concealing rule when the location is the Language Studies Departme
 	say "Through the window in Waterstone's door, [we] can see him turning the lock. When he catches us watching he gives a tight, unfriendly smile and goes back to his desk." instead.]
 
 Check examining office-door-1 when the subcommand of office-door-1 matches "waterstone":
-	if Professor Waterstone is marked-visible:
+	if Professor Waterstone is visible:
 		try examining Professor Waterstone instead.
 
 Instead of searching the special glass window when office-door-1 is closed:
@@ -1550,7 +1550,7 @@ Understand "swipe [something]" as taking.
 Understand "swipe [keycard]" as swiping. Swiping is an action applying to one thing.
 
 Check swiping:
-	if the the keycard-reading lock is marked invisible:
+	if the the keycard-reading lock is not visible:
 		say "There's nothing here to read it with." instead.
 
 Carry out swiping:
@@ -1606,7 +1606,7 @@ After inserting something noisy into the large carton:
 Understand "recycle [something]" as recycling. Recycling is an action applying to one carried thing.
 Sanity-check recycling a person:
 	say "[The noun] might not take kindly to that." instead.
-Check recycling something when the large carton is marked invisible:
+Check recycling something when the large carton is not visible:
 	say "There's no place to recycle [the noun]." instead.
 Carry out recycling something:
 	try inserting the noun into the large carton instead.
@@ -1778,7 +1778,7 @@ A tiny refrigerator is a refrigerator in the Graduate Student Office. The tiny r
 
 On the fridge-top is a coffee-maker. The coffee-maker is a device. A coffee-pot is part of the coffee-maker. The coffee-pot is a container. Understand "coffee pot" or "coffeepot" or "pot" as the coffee-pot. Understand "coffee maker" or "coffeemaker" or "maker" or "coffee" as the coffee-maker. The scent-description of the coffee-maker is "damp, aging coffee grounds".
 
-Understand "make [coffee-maker]" or "make [coffee-pot]" or "brew [coffee-pot]" or "brew [coffee-maker]" as making when the coffee-maker is marked-visible.
+Understand "make [coffee-maker]" or "make [coffee-pot]" or "brew [coffee-pot]" or "brew [coffee-maker]" as making when the coffee-maker is visible.
 
 Instead of making the coffee-maker: try switching on the coffee-maker.
 Instead of making the coffee-pot: try switching on the coffee-maker.

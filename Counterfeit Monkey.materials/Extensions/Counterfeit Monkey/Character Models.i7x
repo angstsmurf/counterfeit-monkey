@@ -321,12 +321,12 @@ The greeting of the player is "'Hi,' [we] say."
 The new check hailing rule is listed instead of the check what's being hailed rule in the check hailing rulebook.
 
 Check hailing (this is the new check hailing rule):
-	if the current interlocutor is a marked-visible person:
+	if the current interlocutor is a visible person:
 		if the current quip is generic-quip:
 			now the current quip is the greet-quip;
 			say "[We] [one of]nod[or]wave[or]smile and acknowledge [the current interlocutor][or]say hi[or]return the greeting[at random]." instead;
 		say already-have instead;
-	now the noun is a random marked-visible person who is not the player;
+	now the noun is a random visible person who is not the player;
 	if the noun is a person:
 		say "(addressing [the noun])";
 	otherwise:

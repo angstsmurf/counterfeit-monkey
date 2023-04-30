@@ -183,7 +183,7 @@ Report requesting hint about the tube:
 	say "[one of]It would be useful if this were a larger container.[or]Perhaps something that could be made from the word TUBE.[or]How about a tub?[or]WAVE E-REMOVER AT TUBE.[stopping]";
 	stop the action.
 
-Check requesting hint about the locker when the lock is marked-visible:
+Check requesting hint about the locker when the lock is visible:
 	try requesting hint about the lock instead.
 
 Report requesting hint about the locker:
@@ -200,7 +200,7 @@ To say body-part-suggestion:
 	else:
 		say "[one of]I know we've seen something that could be converted into a body part[or]The wheel back at the Fair might do[or]W-remove the wheel, then take the heel and show it to the girl, is what I'm thinking of[stopping].";
 
-Check requesting hint about the lock when the backpacking girl is marked-visible:
+Check requesting hint about the lock when the backpacking girl is visible:
 	try requesting hint about the backpacking girl instead.
 
 Report requesting hint about the lock:

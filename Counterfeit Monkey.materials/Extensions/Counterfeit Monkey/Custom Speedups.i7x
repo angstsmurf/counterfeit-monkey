@@ -2,120 +2,13 @@ Custom Speedups by Counterfeit Monkey begins here.
 
 Use authorial modesty.
 
-[ These are used to speed up Scope Caching ]
-
-To rapidly set everything marked invisible:
-	(- MyAllSetMarkedInvisible(); -).
-
-To rapidly set (n - an object) marked visible:
-	(- MySetMarkedVisible({n}); -).
-
-To rapidly set everything marked-visible as seen:
-	(- MySetAllMarkedVisibleAsSeen(); -).
-
-To mark contents of (box - an opaque container) visible:
-	(- if (child({box})) MarkContentsVisible(child({box})); -).
-
-To mark contents of (box - an opaque container) invisible:
-	(- if (child({box})) MarkContentsInvisible(child({box})); -).
-
 To decide which object is random-visible-thing:
 	(- RandomVisibleThing() -).
 
 To decide which object is the unleavable:
 	(- FindUnleavableLoop(real_location) -).
 
-
-The new player aware of actions by visible actors rule is listed instead of the player aware of actions by visible actors rule in the player's action awareness rules.
-
-The new player aware of actions on visible nouns rule is listed instead of the player aware of actions on visible nouns rule in the player's action awareness rules.
-
-The new player aware of actions on visible second nouns rule is listed instead of the player aware of actions on visible second nouns rule in the player's action awareness rules.
-
-A player's action awareness rule
-	(this is the new player aware of actions by visible actors rule):
-	if the player is not the actor and the actor is marked-visible, rule succeeds.
-
-A player's action awareness rule
-	(this is the new player aware of actions on visible nouns rule):
-	if the noun is a thing and the noun is marked-visible, rule succeeds.
-
-A player's action awareness rule
-	(this is the new player aware of actions on visible second nouns rule):
-	if the second noun is a thing and the second noun is marked-visible, rule succeeds.
-
 Include (-
-
-	[ MyAllSetMarkedInvisible obj;
-		for (obj = IK2_First: obj: obj = obj.IK2_Link) {
-			give obj ~(+ marked-visible +);
-		}
-	];
-
-	[ MySetMarkedVisible obj;
-		give obj (+ marked-visible +);
-	];
-
-
-	[ MySetAllMarkedVisibleAsSeen obj;
-		for (obj=IK2_First: obj: obj=obj.IK2_Link) {
-			if (obj has (+ marked-visible +) )
-				 obj.(+ seen +) = true;
-		}
-	];
-
-	[ MarkContentsVisible start o;
-		!loop through everything in start object
-		for (o=start : o :) {
-			give o (+ marked-visible +);
-			o.(+ seen +) = true;
-
-			!Check any components recursively
-			if (o.component_child)
-				MarkContentsVisible(o.component_child);
-
-			if (o.component_sibling)
-				MarkContentsVisible(o.component_sibling);
-
-			! Don't look inside closed opaque containers
-			if (child(o) &&  ~~((o has openable && o hasnt open) && o hasnt transparent))
-				o = child(o);
-			else
-				while (o) {
-					if (sibling(o)) { o = sibling(o); break; }
-
-					o = parent(o);
-					if ( o == parent(start)) return;
-				}
-		}
-		return;
-	];
-
-	[ MarkContentsInvisible start o;
-		!loop through everything in start object
-		for (o=start : o :) {
-			give o ~(+ marked-visible +);
-
-			!Check any components recursively
-			if (o.component_child)
-				MarkContentsInvisible(o.component_child);
-
-			if (o.component_sibling)
-				MarkContentsInvisible(o.component_sibling);
-
-			! Don't look inside closed opaque containers
-			if (child(o) &&  ~~((o has openable && o hasnt open) && o hasnt transparent))
-				o = child(o);
-			else
-				while (o) {
-					if (sibling(o)) { o = sibling(o); break; }
-
-					o = parent(o);
-					if ( o == parent(start)) return;
-				}
-		}
-		return;
-	];
 
 	[ IsUnleavable obj;
 		if (~~(obj ofclass (+ thing +))) rfalse;

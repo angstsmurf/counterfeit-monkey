@@ -89,7 +89,7 @@ Instead of facing inside:
 To decide which object is car-or-container:
 	if there is a car (called C) in location and the player is not in C:
 		decide on C;
-	let B be a random marked-visible container in location;
+	let B be a random visible container in location;
 	if B is a box listed in the Table of Obvious Containers to Look Inside and the player is not enclosed by B:
 		decide on B;
 	otherwise:

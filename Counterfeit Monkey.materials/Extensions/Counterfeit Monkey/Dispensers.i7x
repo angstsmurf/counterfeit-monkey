@@ -23,7 +23,7 @@ Does the player mean waving the letter-remover at the sap-liquid:
 Does the player mean waving the letter-remover at the sop:
 	it is very likely.
 
-The soap dispenser is a closed container in the Public Convenience. It is privately-named. Understand "dispenser" or "soap dispenser" as the soap dispenser. Understand "soap" as the soap dispenser when the soap is marked invisible. It is fixed in place. The initial appearance of the soap dispenser is "A [soap dispenser] hangs beside the mirror." The description of the soap dispenser is "It's the kind where a squeeze will dispense new soap into the sink[if the soap is not in the soap dispenser]. It is also empty[end if]."
+The soap dispenser is a closed container in the Public Convenience. It is privately-named. Understand "dispenser" or "soap dispenser" as the soap dispenser. Understand "soap" as the soap dispenser when the soap is not visible. It is fixed in place. The initial appearance of the soap dispenser is "A [soap dispenser] hangs beside the mirror." The description of the soap dispenser is "It's the kind where a squeeze will dispense new soap into the sink[if the soap is not in the soap dispenser]. It is also empty[end if]."
 
 Sanity-check taking the soap dispenser when the soap is in the soap dispenser:
 	if the subcommand of the soap dispenser matches "soap":

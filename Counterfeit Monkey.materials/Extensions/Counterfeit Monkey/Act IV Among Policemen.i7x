@@ -418,7 +418,7 @@ Instead of going to Bureau hallway from the Antechamber when the player encloses
 		say "[path-walked so far]";
 	otherwise:
 		clear path-walked for player;
-	if the pass is marked invisible:
+	if the pass is not visible:
 		if the pass is enclosed by a closed container (called the barrier):
 			try opening the barrier;
 		try taking the pass;
